@@ -96,7 +96,7 @@
       background:
         linear-gradient(180deg, rgba(8,12,11,.30), rgba(8,12,11,.50) 42%, rgba(8,12,11,.68)),
         radial-gradient(circle at 50% 18%, rgba(118,188,215,.14), transparent 42%),
-        url("https://raw.githubusercontent.com/scriptedSyntax/p0rtfolio/main/hero-space-coder.png") center top / cover no-repeat;
+        url("https://raw.githubusercontent.com/scriptedSyntax/myportfolio/main/hero-space-coder.png") center top / cover no-repeat;
       border-top: 1px solid transparent;
       z-index: -1;
       transform: translate3d(0, calc(var(--bg-offset, 0px) * -1), 0);
@@ -476,7 +476,7 @@
       width: min(485px, 100%);
       background:
         linear-gradient(90deg, rgba(9, 12, 15, .92), rgba(9, 12, 15, .82)),
-        url("https://raw.githubusercontent.com/scriptedSyntax/p0rtfolio/main/hero-space-coder.png") center bottom / cover no-repeat;
+        url("https://raw.githubusercontent.com/scriptedSyntax/myportfolio/main/hero-space-coder.png") center bottom / cover no-repeat;
       border: 1px solid rgba(182,231,195,.24);
       border-radius: 9px; padding: 28px; position: relative; box-shadow: 0 24px 72px rgba(0,0,0,.42);
       backdrop-filter: blur(18px);
@@ -630,7 +630,7 @@
           <div class="hero-actions">
             <a class="btn btn-primary" href="#work"><i class="bi bi-rocket-takeoff"></i> Explore Live Work</a>
             <a class="btn btn-secondary" href="https://github.com/scriptedSyntax" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub Profile</a>
-            <a class="btn btn-secondary" href="https://raw.githubusercontent.com/scriptedSyntax/p0rtfolio/main/samuel_mwangi_cv.pdf" download="samuel_mwangi_cv.pdf"><i class="bi bi-file-earmark-arrow-down"></i> Download CV</a>
+            <a class="btn btn-secondary" href="https://raw.githubusercontent.com/scriptedSyntax/myportfolio/main/samuel_mwangi_cv.pdf" download="samuel_mwangi_cv.pdf"><i class="bi bi-file-earmark-arrow-down"></i> Download CV</a>
           </div>
           <p class="icon-hint">Hover or click for more info</p>
           <div class="hero-tags" aria-label="Core specialities">
@@ -884,7 +884,7 @@
     <div class="shell footer-inner">
       <p>© 2026 Samuel Mwangi Ngonjo · Full-Stack Developer & Systems Engineer</p>
       <nav class="footer-links" aria-label="Social links">
-        <a href="https://github.com/scriptedSyntax/p0rtfolio/blob/main/index" target="_blank" rel="noopener">Portfolio</a>
+        <a href="https://github.com/scriptedSyntax/myportfolio/blob/main/index" target="_blank" rel="noopener">Portfolio</a>
         <a href="https://github.com/scriptedSyntax" target="_blank" rel="noopener">GitHub</a>
         <a href="https://linkedin.com/in/samuel-mwangi-11597a245" target="_blank" rel="noopener">LinkedIn</a>
       </nav>
