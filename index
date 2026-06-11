@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0e1512" id="themeColor" />
+  <title>Samuel Mwangi Ngonjo | Full-Stack Developer & Systems Engineer</title>
+  <meta name="description" content="Samuel Mwangi Ngonjo is a full-stack developer and systems engineer building polished interfaces, reliable backend platforms, automation workflows and health-tech solutions." />
+  <meta property="og:title" content="Samuel Mwangi Ngonjo | Full-Stack Developer & Systems Engineer" />
+  <meta property="og:description" content="Frontend clarity. Backend depth. Complete digital products built for real operations." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='17' fill='%23101a16'/%3E%3Cpath d='M18 21h28v5H24v5h17v5H24v7h22v5H18z' fill='%237aa98a'/%3E%3Ccircle cx='48' cy='18' r='5' fill='%239ac6a4'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <style>
+    :root {
+      --bg: #0e1512;
+      --bg-alt: #111a16;
+      --surface: #151f1b;
+      --surface-2: #171d22;
+      --surface-3: #20272d;
+      --raised: rgba(24, 29, 34, .82);
+      --line: rgba(154, 187, 171, .18);
+      --line-strong: rgba(159, 219, 188, .32);
+      --text: #ece9e2;
+      --muted: #abb5ae;
+      --subtle: #77847c;
+      --accent: #7bbd9b;
+      --accent-strong: #b6e7c3;
+      --accent-soft: #1a3025;
+      --accent-deep: #13261d;
+      --chip: #1c2923;
+      --shadow: rgba(0, 0, 0, .36);
+      --header-bg: rgba(14, 21, 18, .88);
+      --terminal: #101814;
+      --success: #85bf92;
+      --green-card: rgba(18, 38, 31, .78);
+      --green-card-2: rgba(26, 48, 40, .76);
+      --green-card-3: rgba(34, 57, 47, .76);
+      --deep-card: rgba(9, 14, 16, .84);
+      --deep-text: #eef0ea;
+      --deep-muted: #b3c2b9;
+      --overlay: rgba(4, 10, 7, .70);
+    }
+
+    html[data-theme="light"] {
+      --bg: #e9e5dc;
+      --bg-alt: #e2ddd2;
+      --surface: #f1ede4;
+      --surface-2: #e4e0d5;
+      --surface-3: #d9d5ca;
+      --raised: #f5f1e9;
+      --line: #cdc8bc;
+      --line-strong: #aebbaf;
+      --text: #18211d;
+      --muted: #57645d;
+      --subtle: #707c75;
+      --accent: #276044;
+      --accent-strong: #1f5139;
+      --accent-soft: #d5ded4;
+      --accent-deep: #c9d7cb;
+      --chip: #dfdbd0;
+      --shadow: rgba(34, 43, 37, .10);
+      --header-bg: rgba(233, 229, 220, .92);
+      --terminal: #18231e;
+      --success: #276044;
+      --green-card: #d5dfd3;
+      --green-card-2: #c5d3c6;
+      --green-card-3: #23382f;
+      --deep-card: #1a2a24;
+      --deep-text: #f1efe8;
+      --deep-muted: #c1cec6;
+      --overlay: rgba(20, 28, 24, .58);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Inter", Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background-color .35s ease, color .35s ease;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 145vh;
+      pointer-events: none;
+      background:
+        linear-gradient(180deg, rgba(8,12,11,.30), rgba(8,12,11,.50) 42%, rgba(8,12,11,.68)),
+        radial-gradient(circle at 50% 18%, rgba(118,188,215,.14), transparent 42%),
+        url("hero-space-coder.png") center top / cover no-repeat;
+      border-top: 1px solid transparent;
+      z-index: -1;
+      transform: translate3d(0, calc(var(--bg-offset, 0px) * -1), 0);
+      will-change: transform;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; color: inherit; }
+    img { max-width: 100%; }
+    p { margin: 0; }
+    h1, h2, h3, h4 { margin: 0; line-height: 1.1; letter-spacing: -.04em; }
+    ul { padding: 0; margin: 0; list-style: none; }
+    .mono { font-family: "JetBrains Mono", monospace; }
+    .shell { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
+    .section { padding: 92px 0; position: relative; background: rgba(9, 14, 13, .34); }
+    .section::before {
+      content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+      width: min(520px, 58vw); height: 1px; pointer-events: none;
+      background: linear-gradient(90deg, transparent, rgba(182,231,195,.58), transparent);
+      filter: blur(.25px);
+    }
+    .section.alt { background: rgba(9, 14, 13, .34); border-block: 0; }
+    .skip-link {
+      position: absolute; top: -52px; left: 24px; z-index: 999;
+      background: var(--accent); color: #0b1510; padding: 10px 14px; border-radius: 10px;
+    }
+    .skip-link:focus { top: 18px; }
+
+    .progress {
+      height: 3px; position: fixed; left: 0; top: 0; width: var(--scroll, 0%);
+      background: var(--accent); z-index: 200; transition: width .08s linear;
+    }
+    .site-header {
+      position: sticky; top: 0; z-index: 100;
+      border-bottom: 0;
+      background: rgba(10, 14, 16, .70);
+      backdrop-filter: blur(18px);
+    }
+    .nav {
+      min-height: 74px; display: flex; justify-content: space-between; align-items: center; gap: 22px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; min-width: 210px; }
+    .brand-mark {
+      width: 40px; height: 40px; border: 1px solid var(--line-strong); background: var(--surface-2);
+      color: var(--accent-strong); border-radius: 13px; display: grid; place-items: center;
+      font-family: "JetBrains Mono", monospace; font-weight: 600;
+    }
+    .brand strong { font-size: 15px; display: block; letter-spacing: -.03em; }
+    .brand small { color: var(--muted); font-size: 12px; display: block; }
+    .nav-links { display: flex; align-items: center; gap: 8px; }
+    .nav-links a {
+      font-size: 14px; color: var(--muted); padding: 10px 12px; border-radius: 10px;
+      transition: color .2s ease, background-color .2s ease;
+    }
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--text); background: var(--surface-2); }
+    .nav-actions { display: flex; align-items: center; gap: 10px; }
+    .icon-btn {
+      width: 45px; height: 45px; display: grid; place-items: center; border-radius: 13px;
+      border: 1px solid var(--line); background: var(--surface); cursor: pointer;
+      transition: transform .2s ease, border-color .2s ease, background-color .2s ease;
+    }
+    .icon-btn:hover { transform: translateY(-2px); border-color: var(--accent); background: var(--surface-2); }
+    .btn {
+      position: relative; overflow: hidden;
+      display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+      border: 1px solid var(--line-strong); border-radius: 7px; padding: 13px 18px;
+      font-weight: 600; font-size: 14px; transition: transform .22s ease, background-color .22s ease, border-color .22s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:active {
+      transform: translateY(0) scale(.97);
+      box-shadow: 0 0 0 5px rgba(182, 231, 195, .12), 0 0 34px rgba(182, 231, 195, .22);
+    }
+    .btn-primary { color: #0b1510; background: var(--accent); border-color: var(--accent); }
+    .btn-primary:hover { background: var(--accent-strong); border-color: var(--accent-strong); }
+    .btn-secondary { background: var(--surface); color: var(--text); }
+    .btn-secondary:hover { background: var(--surface-2); border-color: var(--accent); }
+
+    .hero {
+      min-height: 132vh; padding: 82px 0 86px; position: relative; overflow: hidden;
+      display: flex; align-items: flex-start;
+    }
+    .hero::after {
+      content: ""; position: absolute; inset: 0; z-index: -1;
+      background:
+        linear-gradient(180deg, rgba(14,21,18,.24), rgba(14,21,18,.48) 45%, rgba(14,21,18,.70)),
+        radial-gradient(circle at 50% 18%, rgba(112,169,135,.18), transparent 42%);
+    }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 760px); justify-content: center; gap: 24px; text-align: center; }
+    .hero-side { min-width: 0; display: grid; justify-items: center; }
+    .hero-side.right { gap: 18px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px; color: var(--accent-strong);
+      border: 1px solid var(--line-strong); background: var(--accent-deep); padding: 8px 12px;
+      border-radius: 999px; font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+    }
+    .dot {
+      display: inline-block; width: 8px; height: 8px; border-radius: 99px; background: var(--success);
+      box-shadow: 0 0 0 0 rgba(112, 169, 135, .4); animation: pulse 2s infinite;
+    }
+    .hero h1 { font-size: clamp(42px, 6vw, 74px); margin: 0; max-width: 760px; text-shadow: 0 16px 40px rgba(0,0,0,.42); }
+    .hero h1 span { color: var(--accent-strong); }
+    .hero-copy { font-size: 17px; color: var(--muted); max-width: 650px; margin: 0; }
+    .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+    .icon-hint {
+      color: rgba(236, 233, 226, .58); font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
+      margin-top: -4px;
+    }
+    .hero-tags {
+      --hero-icon-size: clamp(96px, 12vw, 138px);
+      display: grid; grid-template-columns: repeat(3, var(--hero-icon-size)); gap: 14px;
+      margin-top: 2px; position: relative; justify-content: center;
+    }
+    .hero-tags button {
+      position: relative; width: var(--hero-icon-size); height: var(--hero-icon-size); display: grid; place-items: center; cursor: pointer;
+      background: #181b1f; color: var(--accent-strong); border: 1px solid #30343a; border-radius: 7px;
+      font-size: clamp(38px, 5vw, 56px); transition: transform .18s ease, border-color .18s ease, background-color .18s ease, box-shadow .18s ease;
+    }
+    .hero-tags button i { position: relative; z-index: 1; }
+    .hero-tags button::before {
+      content: ""; position: absolute; inset: 14%; border-radius: inherit; opacity: 0;
+      background: radial-gradient(circle, currentColor, transparent 62%);
+      filter: blur(18px); transition: opacity .18s ease, transform .18s ease;
+    }
+    .hero-tags button:hover, .hero-tags button:focus-visible {
+      transform: translateY(-5px); border-color: var(--accent); background: #20252b; outline: 0;
+    }
+    .hero-tags button:hover::before, .hero-tags button:focus-visible::before, .hero-tags button.is-active::before {
+      opacity: .28; transform: scale(1.08);
+    }
+    .hero-tags button:active {
+      transform: translateY(-1px) scale(.96);
+      box-shadow: 0 0 0 6px rgba(182, 231, 195, .10), 0 0 42px rgba(182, 231, 195, .22);
+    }
+    .hero-tags button:nth-child(1):hover, .hero-tags button:nth-child(1):focus-visible, .hero-tags button:nth-child(1).is-active {
+      color: #75d7ff; border-color: #75d7ff; background: rgba(117, 215, 255, .14); box-shadow: 0 0 38px rgba(117, 215, 255, .16);
+    }
+    .hero-tags button:nth-child(2):hover, .hero-tags button:nth-child(2):focus-visible, .hero-tags button:nth-child(2).is-active {
+      color: #7ee787; border-color: #7ee787; background: rgba(126, 231, 135, .14); box-shadow: 0 0 38px rgba(126, 231, 135, .16);
+    }
+    .hero-tags button:nth-child(3):hover, .hero-tags button:nth-child(3):focus-visible, .hero-tags button:nth-child(3).is-active {
+      color: #f7c948; border-color: #f7c948; background: rgba(247, 201, 72, .14); box-shadow: 0 0 38px rgba(247, 201, 72, .16);
+    }
+    .hero-tags button:nth-child(4):hover, .hero-tags button:nth-child(4):focus-visible, .hero-tags button:nth-child(4).is-active {
+      color: #b9a7ff; border-color: #b9a7ff; background: rgba(185, 167, 255, .14); box-shadow: 0 0 38px rgba(185, 167, 255, .16);
+    }
+    .hero-tags button:nth-child(5):hover, .hero-tags button:nth-child(5):focus-visible, .hero-tags button:nth-child(5).is-active {
+      color: #ff8fb3; border-color: #ff8fb3; background: rgba(255, 143, 179, .14); box-shadow: 0 0 38px rgba(255, 143, 179, .16);
+    }
+    .hero-tags button:nth-child(6):hover, .hero-tags button:nth-child(6):focus-visible, .hero-tags button:nth-child(6).is-active {
+      color: #b5f36b; border-color: #b5f36b; background: rgba(181, 243, 107, .14); box-shadow: 0 0 38px rgba(181, 243, 107, .16);
+    }
+    .hero-tags button::after {
+      content: attr(data-note); position: fixed; left: 50%; top: 86px; transform: translate(-50%, -8px) scale(.96);
+      opacity: 0; pointer-events: none; z-index: 250; white-space: nowrap;
+      background: rgba(12, 14, 17, .94); color: #f4f5ef; border: 1px solid rgba(255,255,255,.12);
+      border-radius: 999px; padding: 12px 18px; box-shadow: 0 18px 45px rgba(0,0,0,.34);
+      font-size: 13px; font-weight: 700; letter-spacing: -.01em; transition: opacity .18s ease, transform .18s ease;
+    }
+    .hero-tags button:hover::after, .hero-tags button:focus-visible::after {
+      opacity: 1; transform: translate(-50%, 0) scale(1);
+    }
+    .feature-island {
+      position: fixed; left: 50%; top: 86px; transform: translate(-50%, -8px) scale(.96);
+      opacity: 0; pointer-events: none; z-index: 260;
+      background: rgba(12, 14, 17, .96); color: #f4f5ef; border: 1px solid rgba(255,255,255,.13);
+      border-radius: 999px; padding: 12px 18px; box-shadow: 0 18px 45px rgba(0,0,0,.34);
+      font-size: 13px; font-weight: 700; transition: opacity .18s ease, transform .18s ease;
+    }
+    .feature-island.is-visible { opacity: 1; transform: translate(-50%, 0) scale(1); }
+    .code-card {
+      position: relative; padding: 7px; background: rgba(16, 18, 21, .86); border: 1px solid rgba(190, 224, 210, .18);
+      border-radius: 5px; box-shadow: 0 25px 70px rgba(0,0,0,.38); width: min(100%, 660px); justify-self: center;
+    }
+    .terminal {
+      background: #0b0d10; color: #d8e0d8; border: 1px solid #2a2e34; border-radius: 0; overflow: hidden;
+    }
+    .terminal-head {
+      display: flex; align-items: center; justify-content: space-between; padding: 9px 12px;
+      border-bottom: 1px solid rgba(120,150,130,.16); color: #87958c; font-size: 12px;
+      background: #171a1f;
+    }
+    .terminal-dots { display: flex; gap: 7px; }
+    .terminal-dots span { width: 8px; height: 8px; border-radius: 50%; }
+    .terminal-dots span:nth-child(1) { background: #ff5f57; }
+    .terminal-dots span:nth-child(2) { background: #ffbd2e; }
+    .terminal-dots span:nth-child(3) { background: #28c840; }
+    .terminal-body { padding: 18px 16px; font-size: 13px; line-height: 1.95; min-height: 275px; }
+    .t-green { color: #95c3a0; }
+    .t-faded { color: #77857e; }
+    .t-white { color: #ecede8; }
+    .cursor { display: inline-block; width: 8px; height: 16px; vertical-align: -3px; margin-left: 4px; background: #91c09c; animation: blink 1s step-end infinite; }
+    .floating-status {
+      position: absolute; right: -19px; bottom: 54px; display: flex; align-items: center; gap: 11px;
+      background: rgba(16, 18, 21, .78); border: 1px solid var(--line-strong); border-radius: 9px; padding: 12px 15px;
+      box-shadow: 0 12px 36px var(--shadow); animation: float 5s ease-in-out infinite;
+    }
+    .floating-status i { color: var(--accent-strong); font-size: 19px; }
+    .floating-status strong { font-size: 12px; display: block; letter-spacing: -.01em; }
+    .floating-status small { display: block; color: var(--muted); font-size: 11px; }
+
+    .confidence { padding: 32px 0 68px; }
+    .confidence-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .metric {
+      background: rgba(21, 31, 27, .76); border: 1px solid var(--line); border-radius: 9px; padding: 20px 18px;
+      min-height: 106px; transition: transform .22s ease, border-color .22s ease, background-color .22s ease;
+    }
+    .metric:nth-child(1) { background: var(--green-card); }
+    .metric:nth-child(2) { background: var(--surface-2); }
+    .metric:nth-child(3) { background: var(--deep-card); border-color: var(--line-strong); color: var(--deep-text); }
+    .metric:nth-child(4) { background: var(--green-card-2); }
+    .metric:hover { transform: translateY(-4px); border-color: var(--accent); }
+    .metric strong { display: block; font-size: 21px; color: var(--accent-strong); margin-bottom: 7px; letter-spacing: -.04em; }
+    .metric span { color: var(--muted); font-size: 13px; }
+    .metric:nth-child(3) span { color: var(--deep-muted); }
+
+    .ticker { border-block: 0; background: rgba(10, 14, 16, .46); overflow: hidden; }
+    .ticker-track {
+      display: flex; width: max-content; align-items: center; gap: 11px; padding: 17px 0;
+      animation: ticker 27s linear infinite;
+    }
+    .ticker:hover .ticker-track { animation-play-state: paused; }
+    .tech-pill {
+      display: inline-flex; gap: 9px; align-items: center; flex: 0 0 auto; color: var(--muted);
+      background: var(--surface-2); border: 1px solid var(--line); border-radius: 999px; padding: 9px 14px; font-size: 13px;
+    }
+    .tech-pill i { color: var(--accent-strong); }
+
+    .section-heading { max-width: 680px; margin-bottom: 45px; }
+    .label { color: var(--accent-strong); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; margin-bottom: 13px; display: block; }
+    .section-heading h2 { font-size: clamp(31px, 4.2vw, 45px); margin-bottom: 14px; }
+    .section-heading p { color: var(--muted); font-size: 16px; }
+    .cap-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .cap-card {
+      position: relative; min-height: 278px; padding: 25px 22px; border: 1px solid var(--line); border-radius: 9px;
+      background: var(--surface); transition: transform .24s ease, border-color .24s ease, background-color .24s ease;
+      overflow: hidden;
+    }
+    .cap-card:nth-child(1) { background: var(--surface); }
+    .cap-card:nth-child(2) { background: var(--green-card); }
+    .cap-card:nth-child(3) { background: var(--green-card-2); }
+    .cap-card:nth-child(4) { background: var(--deep-card); border-color: var(--line-strong); color: var(--deep-text); }
+    .cap-card:nth-child(4) p { color: var(--deep-muted); }
+    .cap-card:hover { transform: translateY(-6px); border-color: var(--accent); }
+    .cap-number { color: var(--subtle); font-size: 11px; margin-bottom: 31px; }
+    .cap-icon {
+      height: 43px; width: 43px; display: grid; place-items: center; margin-bottom: 20px;
+      border: 1px solid var(--line-strong); background: var(--accent-deep); border-radius: 8px; color: var(--accent-strong); font-size: 19px;
+    }
+    .cap-card h3 { font-size: 20px; margin-bottom: 11px; }
+    .cap-card p { color: var(--muted); font-size: 14px; }
+
+    .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .project {
+      border: 1px solid var(--line); border-radius: 9px; background: rgba(21, 31, 27, .82); padding: 25px;
+      transition: transform .24s ease, border-color .24s ease, background-color .24s ease;
+      display: flex; flex-direction: column; min-height: 309px;
+    }
+    .project:nth-child(1) { background: var(--green-card); }
+    .project:nth-child(2) { background: var(--surface-2); }
+    .project:nth-child(4) { background: var(--green-card-2); }
+    .project:hover { transform: translateY(-5px); border-color: var(--accent); }
+    .project.live { border-color: var(--line-strong); }
+    .project.device {
+      background: var(--deep-card); border-color: var(--line-strong); color: var(--deep-text);
+    }
+    .project.device p, .project.device .out-icon { color: var(--deep-muted); }
+    .project.device .project-stack span { border-color: rgba(145,192,156,.20); color: var(--deep-muted); background: rgba(112,169,135,.08); }
+    .project-top { display: flex; justify-content: space-between; gap: 18px; margin-bottom: 30px; }
+    .tag {
+      display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--line-strong);
+      background: var(--accent-deep); color: var(--accent-strong); border-radius: 999px; padding: 6px 10px;
+      font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .07em;
+    }
+    .out-icon { color: var(--muted); font-size: 18px; }
+    .project h3 { font-size: 25px; margin-bottom: 12px; }
+    .project p { color: var(--muted); font-size: 14px; max-width: 470px; margin-bottom: 25px; }
+    .project-stack { display: flex; flex-wrap: wrap; gap: 7px; margin-top: auto; margin-bottom: 20px; }
+    .project-stack span { border: 1px solid var(--line); background: var(--chip); color: var(--muted); padding: 5px 9px; border-radius: 8px; font-size: 11px; }
+    .project-link { color: var(--accent-strong); font-size: 13px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; }
+    .project-link i { transition: transform .18s ease; }
+    .project:hover .project-link i { transform: translateX(4px); }
+    .visit-panel {
+      margin-top: 18px; background: rgba(19, 38, 29, .70); border: 1px solid var(--line-strong); border-radius: 9px;
+      padding: 22px; display: flex; justify-content: space-between; align-items: center; gap: 22px;
+    }
+    .visit-panel h3 { font-size: 21px; margin-bottom: 5px; }
+    .visit-panel p { color: var(--muted); font-size: 14px; }
+
+    .experience-grid { display: grid; grid-template-columns: .38fr .62fr; gap: 38px; }
+    .experience-intro { position: sticky; top: 108px; height: max-content; }
+    .experience-intro h2 { font-size: clamp(31px, 3.3vw, 42px); margin: 14px 0; }
+    .experience-intro p { color: var(--muted); }
+    .timeline { border-left: 0; padding-left: 28px; display: grid; gap: 16px; position: relative; }
+    .timeline::before {
+      content: ""; position: absolute; left: 0; top: 18px; bottom: 18px; width: 1px;
+      background: linear-gradient(180deg, transparent, rgba(182,231,195,.48), transparent);
+      filter: blur(.2px);
+    }
+    .job {
+      position: relative; border: 1px solid var(--line); border-radius: 9px; background: rgba(21, 31, 27, .82); padding: 24px;
+      transition: border-color .22s ease, transform .22s ease;
+    }
+    .job:nth-child(1) { background: var(--green-card); }
+    .job:nth-child(2) { background: var(--surface-2); }
+    .job:nth-child(3) { background: var(--green-card-2); }
+    .job:nth-child(4) { background: var(--deep-card); border-color: var(--line-strong); color: var(--deep-text); }
+    .job:nth-child(4) li { color: var(--deep-muted); }
+    .job:hover { transform: translateX(5px); border-color: var(--accent); }
+    .job::before {
+      content: ""; position: absolute; left: -36px; top: 29px; width: 13px; height: 13px; border-radius: 50%;
+      background: var(--accent); border: 3px solid rgba(10, 14, 16, .88);
+    }
+    .job-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 18px; margin-bottom: 15px; }
+    .job h3 { font-size: 20px; margin-bottom: 6px; }
+    .job .company { color: var(--accent-strong); font-size: 14px; font-weight: 600; }
+    .job time { color: var(--muted); border: 1px solid var(--line); background: var(--surface-2); padding: 6px 9px; border-radius: 9px; font-size: 11px; white-space: nowrap; }
+    .job li { display: flex; gap: 10px; color: var(--muted); font-size: 14px; margin-top: 8px; }
+    .job li::before { content: ""; background: var(--accent); width: 5px; height: 5px; border-radius: 50%; margin-top: 9px; flex: 0 0 auto; }
+
+    .stack-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .stack-card { border: 1px solid var(--line); border-radius: 9px; background: rgba(21, 31, 27, .82); padding: 22px; }
+    .stack-card:nth-child(1) { background: var(--green-card); }
+    .stack-card:nth-child(2) { background: var(--surface-2); }
+    .stack-card:nth-child(3) { background: var(--green-card-2); }
+    .stack-card:nth-child(4) { background: var(--deep-card); border-color: var(--line-strong); color: var(--deep-text); }
+    .stack-card:nth-child(4) li { color: var(--deep-muted); border-color: rgba(145,192,156,.17); }
+    .stack-card .stack-icon { color: var(--accent-strong); font-size: 21px; margin-bottom: 17px; }
+    .stack-card h3 { font-size: 18px; margin-bottom: 15px; }
+    .stack-card li { font-size: 13px; color: var(--muted); padding: 7px 0; border-top: 1px solid var(--line); }
+    .stack-card li:first-child { border-top: 0; padding-top: 0; }
+
+    .credentials { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 50px; }
+    .credential {
+      border: 1px solid var(--line); border-radius: 9px; background: rgba(21, 31, 27, .82); padding: 23px;
+      display: flex; gap: 16px; align-items: flex-start;
+    }
+    .credential:first-child { background: var(--green-card); }
+    .credential:last-child { background: var(--deep-card); color: var(--deep-text); border-color: var(--line-strong); }
+    .credential:last-child p { color: var(--deep-muted); }
+    .credential i { color: var(--accent-strong); font-size: 23px; }
+    .credential h3 { font-size: 17px; margin-bottom: 7px; }
+    .credential p { color: var(--muted); font-size: 13px; }
+
+    .contact-wrap {
+      display: grid; grid-template-columns: 1fr .74fr; gap: 28px; align-items: center;
+      background: rgba(12, 15, 18, .72); border: 1px solid rgba(182,231,195,.20); border-radius: 9px; padding: clamp(27px, 5vw, 49px);
+      box-shadow: 0 24px 70px rgba(0,0,0,.34); backdrop-filter: blur(16px);
+    }
+    .contact-wrap h2 { font-size: clamp(34px, 4.4vw, 49px); margin: 14px 0 16px; }
+    .contact-wrap p { color: var(--muted); max-width: 560px; }
+    .contact-links { display: grid; gap: 10px; }
+    .contact-link {
+      display: flex; align-items: center; gap: 13px; border: 1px solid var(--line); background: rgba(23, 29, 34, .76);
+      border-radius: 7px; padding: 15px; transition: border-color .2s ease, transform .2s ease;
+    }
+    .contact-link:hover { transform: translateX(4px); border-color: var(--accent); }
+    .contact-link i { width: 34px; height: 34px; border-radius: 10px; background: var(--accent-deep); color: var(--accent-strong); display: grid; place-items: center; }
+    .contact-link small { display: block; color: var(--subtle); font-size: 11px; text-transform: uppercase; letter-spacing: .07em; }
+    .contact-link strong { display: block; font-size: 14px; font-weight: 500; }
+    .back-to-top {
+      position: fixed; right: 22px; bottom: 22px; z-index: 75; width: 48px; height: 48px;
+      display: grid; place-items: center; border-radius: 8px; border: 1px solid var(--line-strong);
+      background: var(--deep-card); color: var(--accent-strong); cursor: pointer;
+      opacity: 0; visibility: hidden; transform: translateY(10px);
+      transition: opacity .2s ease, visibility .2s ease, transform .2s ease, border-color .2s ease;
+    }
+    .back-to-top.is-visible { opacity: 1; visibility: visible; transform: translateY(0); }
+    .back-to-top:hover { border-color: var(--accent); transform: translateY(-3px); }
+    .opportunity-modal {
+      position: fixed; inset: 0; z-index: 300; display: grid; place-items: center; padding: 20px;
+      background: rgba(4, 8, 10, .48);
+      opacity: 0; visibility: hidden; transition: opacity .25s ease, visibility .25s ease;
+      backdrop-filter: blur(10px);
+    }
+    .opportunity-modal.is-open { opacity: 1; visibility: visible; }
+    .opportunity-dialog {
+      width: min(485px, 100%);
+      background:
+        linear-gradient(90deg, rgba(9, 12, 15, .92), rgba(9, 12, 15, .82)),
+        url("hero-space-coder.png") center bottom / cover no-repeat;
+      border: 1px solid rgba(182,231,195,.24);
+      border-radius: 9px; padding: 28px; position: relative; box-shadow: 0 24px 72px rgba(0,0,0,.42);
+      backdrop-filter: blur(18px);
+      transform: translateY(12px); transition: transform .25s ease;
+    }
+    .opportunity-modal.is-open .opportunity-dialog { transform: translateY(0); }
+    .dialog-close {
+      position: absolute; right: 14px; top: 14px; width: 39px; height: 39px; display: grid; place-items: center;
+      border: 1px solid var(--line); background: rgba(23, 29, 34, .76); border-radius: 7px; cursor: pointer;
+    }
+    .dialog-close:hover { border-color: var(--accent); }
+    .dialog-mark {
+      width: 47px; height: 47px; border-radius: 8px; display: grid; place-items: center;
+      background: var(--green-card); border: 1px solid var(--line-strong); color: var(--accent-strong); font-size: 22px;
+      margin-bottom: 21px;
+    }
+    .opportunity-dialog h2 { font-size: 29px; max-width: 370px; margin-bottom: 12px; }
+    .opportunity-dialog p { color: var(--muted); font-size: 14px; margin-bottom: 23px; }
+    .dialog-actions { display: flex; flex-wrap: wrap; gap: 9px; }
+    .dialog-note { color: var(--subtle); font-size: 11px; margin-top: 17px; display: block; }
+    body.modal-open { overflow: hidden; }
+
+    .footer {
+      border-top: 0; padding: 28px 0; color: var(--muted); font-size: 13px;
+    }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 18px; }
+    .footer-links { display: flex; gap: 17px; }
+    .footer-links a:hover { color: var(--accent-strong); }
+
+    [data-reveal] { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
+    [data-reveal].is-visible { opacity: 1; transform: translateY(0); }
+    [data-reveal-delay="1"] { transition-delay: .1s; }
+    [data-reveal-delay="2"] { transition-delay: .18s; }
+    [data-reveal-delay="3"] { transition-delay: .26s; }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(112,169,135,.42); }
+      75%, 100% { box-shadow: 0 0 0 9px rgba(112,169,135,0); }
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    @keyframes iconBurst {
+      0% { box-shadow: 0 0 0 0 currentColor, 0 0 0 rgba(0,0,0,0); }
+      70% { box-shadow: 0 0 0 18px rgba(255,255,255,0), 0 0 46px currentColor; }
+      100% { box-shadow: 0 0 0 0 rgba(255,255,255,0), 0 0 38px rgba(255,255,255,0); }
+    }
+    .hero-tags button.is-pressed { animation: iconBurst .52s ease-out; }
+    @keyframes ticker { to { transform: translateX(-50%); } }
+
+    @media (max-width: 1040px) {
+      .nav-links { display: none; }
+      .hero-grid, .experience-grid, .contact-wrap { grid-template-columns: 1fr; }
+      .hero-grid { gap: 30px; }
+      .code-card { width: min(100%, 640px); justify-self: center; }
+      .hero-side.right { justify-items: center; }
+      .experience-intro { position: static; }
+      .cap-grid, .stack-grid { grid-template-columns: repeat(2, 1fr); }
+      .confidence-grid { grid-template-columns: repeat(2, 1fr); }
+      .floating-status { right: 14px; }
+    }
+    @media (max-width: 700px) {
+      .shell { width: min(100% - 32px, 1180px); }
+      .section { padding: 68px 0; }
+      .nav { min-height: 68px; }
+      .brand { min-width: unset; }
+      .brand small { display: none; }
+      .nav-actions .btn { display: none; }
+      .hero { min-height: 120vh; padding-top: 62px; }
+      .hero h1 { font-size: clamp(38px, 12vw, 48px); }
+      .hero-copy { font-size: 15px; }
+      .hero-actions .btn { width: 100%; }
+      .hero-tags { --hero-icon-size: min(28vw, 104px); grid-template-columns: repeat(3, var(--hero-icon-size)); }
+      .feature-island, .hero-tags button::after {
+        max-width: calc(100vw - 28px); white-space: normal; text-align: center; top: 76px;
+      }
+      .terminal-body { font-size: 12px; min-height: 245px; overflow-x: auto; }
+      .confidence-grid, .cap-grid, .work-grid, .stack-grid, .credentials { grid-template-columns: 1fr; }
+      .project { min-height: 275px; }
+      .visit-panel, .job-head, .footer-inner { flex-direction: column; align-items: flex-start; }
+      .floating-status { position: static; margin-top: 15px; animation: none; }
+    }
+    @media print {
+      .site-header, .progress, .hero-actions, .ticker, .theme-toggle, .floating-status, .back-to-top, .opportunity-modal { display: none !important; }
+      body, html[data-theme="light"] body { background: #fff; color: #111; }
+      .section, .hero { padding: 28px 0; }
+      .project, .cap-card, .job, .stack-card, .contact-wrap, .metric { break-inside: avoid; border-color: #bbb; background: #fff; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+      [data-reveal] { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="shell nav">
+      <a class="brand" href="#top" aria-label="Samuel Mwangi home">
+        <span class="brand-mark">SM</span>
+        <span><strong>Samuel Mwangi</strong><small>Full-Stack Developer & Systems Engineer</small></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">Profile</a>
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" type="button" id="themeToggle" aria-label="Switch to light theme" title="Toggle theme">
+          <i class="bi bi-sun" id="themeIcon"></i>
+        </button>
+        <a class="btn btn-primary" href="#contact">Interview Me <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="feature-island" id="featureIsland" aria-live="polite"></div>
+      <div class="shell hero-grid">
+        <div class="hero-side" data-reveal>
+          <h1>I build complete digital products — <span>interface to infrastructure.</span></h1>
+        </div>
+        <div class="code-card" data-reveal data-reveal-delay="1">
+          <div class="terminal">
+            <div class="terminal-head mono">
+              <span>samuel@linux:~/delivery</span>
+              <span class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+            </div>
+            <div class="terminal-body mono">
+              <div><span class="t-green">$</span> build <span class="t-white">complete_product</span></div>
+              <div class="t-faded">→ Frontend:</div>
+              <div>&nbsp;&nbsp;<span class="t-green">React</span> · UI engineering · Responsive delivery</div>
+              <div class="t-faded">→ Backend:</div>
+              <div>&nbsp;&nbsp;<span class="t-green">Python / Django</span> · REST APIs · Auth</div>
+              <div class="t-faded">→ Systems:</div>
+              <div>&nbsp;&nbsp;Automation · Data · Device integration</div>
+              <div><span class="t-green">✓</span> <span class="t-white">ready_for_real_operations</span><span class="cursor"></span></div>
+            </div>
+          </div>
+          <div class="floating-status">
+            <i class="bi bi-check2-circle"></i>
+            <span><strong>End-to-end delivery</strong><small>Design · Build · Deploy</small></span>
+          </div>
+        </div>
+        <div class="hero-side right" data-reveal data-reveal-delay="2">
+          <p class="hero-copy">Full-stack developer and systems engineer creating polished frontend experiences, secure backend platforms, workflow automation and health-tech solutions for real operational needs.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#work"><i class="bi bi-rocket-takeoff"></i> Explore Live Work</a>
+            <a class="btn btn-secondary" href="https://github.com/scriptedSyntax" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub Profile</a>
+            <a class="btn btn-secondary" href="https://github.com/scriptedSyntax/portfolio/raw/refs/heads/main/samuel_mwangi_cv.pdf?download=1" download="samuel_mwangi_cv.pdf"><i class="bi bi-file-earmark-arrow-down"></i> Download CV</a>
+          </div>
+          <p class="icon-hint">Hover or click for more info</p>
+          <div class="hero-tags" aria-label="Core specialities">
+            <button type="button" aria-label="React interfaces" data-note="React interfaces: polished responsive UI"><i class="bi bi-window-stack"></i></button>
+            <button type="button" aria-label="Django APIs" data-note="Django APIs: secure backend services"><i class="bi bi-database-gear"></i></button>
+            <button type="button" aria-label="Automation" data-note="Automation: workflows that remove manual drag"><i class="bi bi-gear-wide-connected"></i></button>
+            <button type="button" aria-label="Device integration" data-note="Device integration: hardware meets software"><i class="bi bi-cpu"></i></button>
+            <button type="button" aria-label="Healthcare R and D" data-note="Healthcare R&amp;D: clinical systems thinking"><i class="bi bi-heart-pulse"></i></button>
+            <button type="button" aria-label="AI integrations" data-note="AI integrations: practical intelligent workflows"><i class="bi bi-stars"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="confidence" aria-label="Professional snapshot">
+      <div class="shell confidence-grid">
+        <div class="metric" data-reveal><strong>Full-Stack</strong><span>Frontend experiences and backend systems</span></div>
+        <div class="metric" data-reveal data-reveal-delay="1"><strong>Freelance + Professional</strong><span>Practical delivery for public and internal products</span></div>
+        <div class="metric" data-reveal data-reveal-delay="2"><strong>Device R&amp;D</strong><span>Hardware-software integration for clinical use</span></div>
+        <div class="metric" data-reveal data-reveal-delay="3"><strong>Live Work</strong><span>Websites and code available to review</span></div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-label="Technology stack">
+      <div class="ticker-track mono">
+        <span class="tech-pill"><i class="bi bi-code-slash"></i> React</span><span class="tech-pill"><i class="bi bi-braces"></i> JavaScript</span><span class="tech-pill"><i class="bi bi-window"></i> HTML / CSS</span><span class="tech-pill"><i class="bi bi-terminal"></i> Python</span><span class="tech-pill"><i class="bi bi-server"></i> Django</span><span class="tech-pill"><i class="bi bi-lightning-charge"></i> FastAPI</span><span class="tech-pill"><i class="bi bi-diagram-3"></i> REST APIs</span><span class="tech-pill"><i class="bi bi-database"></i> PostgreSQL</span><span class="tech-pill"><i class="bi bi-fire"></i> Firebase</span><span class="tech-pill"><i class="bi bi-cloud"></i> Azure</span><span class="tech-pill"><i class="bi bi-box-seam"></i> Docker</span><span class="tech-pill"><i class="bi bi-github"></i> GitHub Actions</span><span class="tech-pill"><i class="bi bi-gear-wide-connected"></i> Automation</span><span class="tech-pill"><i class="bi bi-cpu"></i> Device Integration</span><span class="tech-pill"><i class="bi bi-stars"></i> AI Workflows</span>
+        <span class="tech-pill"><i class="bi bi-code-slash"></i> React</span><span class="tech-pill"><i class="bi bi-braces"></i> JavaScript</span><span class="tech-pill"><i class="bi bi-window"></i> HTML / CSS</span><span class="tech-pill"><i class="bi bi-terminal"></i> Python</span><span class="tech-pill"><i class="bi bi-server"></i> Django</span><span class="tech-pill"><i class="bi bi-lightning-charge"></i> FastAPI</span><span class="tech-pill"><i class="bi bi-diagram-3"></i> REST APIs</span><span class="tech-pill"><i class="bi bi-database"></i> PostgreSQL</span><span class="tech-pill"><i class="bi bi-fire"></i> Firebase</span><span class="tech-pill"><i class="bi bi-cloud"></i> Azure</span><span class="tech-pill"><i class="bi bi-box-seam"></i> Docker</span><span class="tech-pill"><i class="bi bi-github"></i> GitHub Actions</span><span class="tech-pill"><i class="bi bi-gear-wide-connected"></i> Automation</span><span class="tech-pill"><i class="bi bi-cpu"></i> Device Integration</span><span class="tech-pill"><i class="bi bi-stars"></i> AI Workflows</span>
+      </div>
+    </div>
+
+    <section class="section" id="about">
+      <div class="shell">
+        <div class="section-heading" data-reveal>
+          <span class="label">Professional Profile</span>
+          <h2>Not just backend. Full products, built properly.</h2>
+          <p>I prefer backend depth, but I deliver end-to-end: clean interfaces, reliable data flows, secure APIs, automation and systems that support real businesses and healthcare operations.</p>
+        </div>
+        <div class="cap-grid">
+          <article class="cap-card" data-reveal>
+            <div class="cap-number mono">01 / FRONTEND</div>
+            <span class="cap-icon"><i class="bi bi-window-stack"></i></span>
+            <h3>Frontend Engineering</h3>
+            <p>Responsive, professional web interfaces and customer journeys built to make the next action obvious.</p>
+          </article>
+          <article class="cap-card" data-reveal data-reveal-delay="1">
+            <div class="cap-number mono">02 / BACKEND</div>
+            <span class="cap-icon"><i class="bi bi-database-gear"></i></span>
+            <h3>Backend Platforms</h3>
+            <p>Python, Django and API-driven architecture for secure, maintainable products and internal systems.</p>
+          </article>
+          <article class="cap-card" data-reveal data-reveal-delay="2">
+            <div class="cap-number mono">03 / OPERATIONS</div>
+            <span class="cap-icon"><i class="bi bi-diagram-3"></i></span>
+            <h3>Automation & Workflows</h3>
+            <p>Digital tools that replace fragmented manual processes with structured, trackable operations.</p>
+          </article>
+          <article class="cap-card" data-reveal data-reveal-delay="3">
+            <div class="cap-number mono">04 / DOMAIN</div>
+            <span class="cap-icon"><i class="bi bi-heart-pulse"></i></span>
+            <h3>Healthcare Systems</h3>
+            <p>Biomedical engineering knowledge that strengthens reliability, documentation and health-tech delivery.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="work">
+      <div class="shell">
+        <div class="section-heading" data-reveal>
+          <span class="label">Selected Work</span>
+          <h2>Do not just read my CV. Visit the work.</h2>
+          <p>Live business websites and public development projects that show frontend execution, backend thinking and a practical product mindset.</p>
+        </div>
+        <div class="work-grid">
+          <a class="project live" href="https://ledanieconstruction.com/" target="_blank" rel="noopener" data-reveal>
+            <div class="project-top"><span class="tag"><span class="dot"></span> Live Website</span><i class="bi bi-box-arrow-up-right out-icon"></i></div>
+            <h3>Ledanie Construction</h3>
+            <p>Public-facing construction company website with services, featured projects, trust indicators, contact actions and a project estimate journey.</p>
+            <div class="project-stack"><span>Web UI</span><span>Responsive UX</span><span>Business Website</span></div>
+            <span class="project-link">Visit live website <i class="bi bi-arrow-right"></i></span>
+          </a>
+          <a class="project live" href="https://gonepharm.com/" target="_blank" rel="noopener" data-reveal data-reveal-delay="1">
+            <div class="project-top"><span class="tag"><span class="dot"></span> Live Health-Tech Site</span><i class="bi bi-box-arrow-up-right out-icon"></i></div>
+            <h3>GONEP</h3>
+            <p>Healthcare technology platform presence showcasing diagnostic solutions, product messaging, resources and partnership journeys.</p>
+            <div class="project-stack"><span>Health-Tech</span><span>Frontend Delivery</span><span>Product Platform</span></div>
+            <span class="project-link">Visit live website <i class="bi bi-arrow-right"></i></span>
+          </a>
+          <a class="project device" href="https://gonepharm.com/" target="_blank" rel="noopener" data-reveal>
+            <div class="project-top"><span class="tag"><i class="bi bi-cpu"></i> R&amp;D · Device Integration</span><i class="bi bi-box-arrow-up-right out-icon"></i></div>
+            <h3>Clinic-at-Hand Lab System</h3>
+            <p>I developed a hardware-software integrated lab system for GONEP, connecting clinical device functionality with software workflows for practical point-of-care use.</p>
+            <div class="project-stack"><span>Hardware + Software</span><span>Clinical Device</span><span>Integration</span><span>R&amp;D</span></div>
+            <span class="project-link">Visit GONEP <i class="bi bi-arrow-right"></i></span>
+          </a>
+          <a class="project" href="https://github.com/scriptedSyntax" target="_blank" rel="noopener" data-reveal data-reveal-delay="1">
+            <div class="project-top"><span class="tag">Open Source & Builds</span><i class="bi bi-box-arrow-up-right out-icon"></i></div>
+            <h3>GitHub Projects</h3>
+            <p>Explore public projects including a Django backend foundation, a Symptom Checker application, Python projects and a Bulk SMS System.</p>
+            <div class="project-stack"><span>Django</span><span>JavaScript</span><span>Python</span><span>Systems</span></div>
+            <span class="project-link">Browse repositories <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </div>
+        <div class="visit-panel" data-reveal>
+          <div>
+            <h3>Review the build, not only the job title.</h3>
+            <p>Visit the public sites and repositories to see how I think about products, systems and delivery.</p>
+          </div>
+          <a class="btn btn-primary" href="https://github.com/scriptedSyntax" target="_blank" rel="noopener">Open GitHub <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="shell experience-grid">
+        <div class="experience-intro" data-reveal>
+          <span class="label">Experience</span>
+          <h2>Built across business, health-tech and operations.</h2>
+          <p>My work combines independent delivery, software engineering and hands-on biomedical systems experience—useful where software has to work beyond a demo.</p>
+        </div>
+        <div class="timeline">
+          <article class="job" data-reveal>
+            <div class="job-head">
+              <div><h3>Independent & Freelance Full-Stack Developer</h3><div class="company">Websites, digital systems & public builds</div></div>
+              <time>Project-Based</time>
+            </div>
+            <ul>
+              <li>Delivered full-stack and frontend-led digital work, including public websites and practical system prototypes.</li>
+              <li>Translated business needs into clear interfaces, service journeys, responsive builds and maintainable technical solutions.</li>
+              <li>Maintained a public project footprint through portfolio work and GitHub repositories.</li>
+              <li>Developed a hardware-software integrated Clinic-at-Hand device concept, extending delivery into clinical device R&amp;D and integration.</li>
+            </ul>
+          </article>
+          <article class="job" data-reveal>
+            <div class="job-head">
+              <div><h3>Senior Software Developer</h3><div class="company">Gonep Pharmaceuticals</div></div>
+              <time>Aug 2025 — Dec 2025</time>
+            </div>
+            <ul>
+              <li>Built internal web applications and backend systems supporting automation, operational workflows and scalable data handling.</li>
+              <li>Modernised systems and supported cloud-ready architecture, production delivery and CI/CD practices.</li>
+              <li>Worked around healthcare technology and operational reliability requirements.</li>
+            </ul>
+          </article>
+          <article class="job" data-reveal>
+            <div class="job-head">
+              <div><h3>Backend & AI Engineer</h3><div class="company">OnlineMedic Healthcare</div></div>
+              <time>Nov 2024 — Mar 2025</time>
+            </div>
+            <ul>
+              <li>Designed Django backend services and REST APIs supporting healthcare workflows across web and mobile contexts.</li>
+              <li>Worked with document understanding, data extraction and automation-ready AI workflows.</li>
+              <li>Supported reliable deployment practices and secure intelligent-service integration.</li>
+            </ul>
+          </article>
+          <article class="job" data-reveal>
+            <div class="job-head">
+              <div><h3>Biomedical Engineering Technologist</h3><div class="company">KUTRRH Level 6 & Thika Level 5 Hospital</div></div>
+              <time>Nov 2023 — May 2024</time>
+            </div>
+            <ul>
+              <li>Maintained, diagnosed and supported clinical equipment in active healthcare environments.</li>
+              <li>Applied equipment tracking, SOP documentation and preventive-maintenance thinking to real operations.</li>
+              <li>Built the systems discipline now applied to dependable healthcare software, device integration and research-led development.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="stack">
+      <div class="shell">
+        <div class="section-heading" data-reveal>
+          <span class="label">Technology Stack</span>
+          <h2>Full-stack capability with backend depth.</h2>
+          <p>The interface matters. The system underneath matters more. I work across both layers to produce usable and dependable digital products.</p>
+        </div>
+        <div class="stack-grid">
+          <article class="stack-card" data-reveal>
+            <i class="bi bi-display stack-icon"></i>
+            <h3>Frontend</h3>
+            <ul><li>React & JavaScript</li><li>Responsive HTML / CSS</li><li>Interface implementation</li><li>Web app experiences</li></ul>
+          </article>
+          <article class="stack-card" data-reveal data-reveal-delay="1">
+            <i class="bi bi-hdd-stack stack-icon"></i>
+            <h3>Backend</h3>
+            <ul><li>Python, Django, Flask</li><li>FastAPI & REST APIs</li><li>Auth & security</li><li>Service architecture</li></ul>
+          </article>
+          <article class="stack-card" data-reveal data-reveal-delay="2">
+            <i class="bi bi-cloud-check stack-icon"></i>
+            <h3>Data & Delivery</h3>
+            <ul><li>PostgreSQL, MySQL, Firebase</li><li>Azure App Services</li><li>GitHub Actions & Docker</li><li>Linux & Git workflows</li></ul>
+          </article>
+          <article class="stack-card" data-reveal data-reveal-delay="3">
+            <i class="bi bi-cpu stack-icon"></i>
+            <h3>Systems & AI</h3>
+            <ul><li>Workflow automation</li><li>AI-enabled systems</li><li>Device integration &amp; R&amp;D</li><li>Health-tech digitisation</li></ul>
+          </article>
+        </div>
+        <div class="credentials">
+          <article class="credential" data-reveal>
+            <i class="bi bi-mortarboard"></i>
+            <div><h3>Diploma in Medical Engineering Technology</h3><p>Kenya Medical Training College — 2024. Clinical engineering, health informatics, electronics and medical-device systems.</p></div>
+          </article>
+          <article class="credential" data-reveal data-reveal-delay="1">
+            <i class="bi bi-patch-check"></i>
+            <div><h3>Specialised Technical Training</h3><p>Medical Device QA & Safety, Advanced Imaging QA, and Clinical Systems & Simulation training through Fluke Biomedical and GE Healthcare.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="shell contact-wrap" data-reveal>
+        <div>
+          <span class="label">Contact</span>
+          <h2>Let’s build.</h2>
+          <p>Open to full-stack development, backend engineering, systems development and healthcare technology opportunities where clean delivery and dependable operations matter.</p>
+        </div>
+        <div class="contact-links">
+          <a class="contact-link" href="tel:+254799594621"><i class="bi bi-telephone"></i><span><small>Call</small><strong>0799 594 621</strong></span></a>
+          <a class="contact-link" href="mailto:samuel.mwas97@gmail.com"><i class="bi bi-envelope"></i><span><small>Email</small><strong>samuel.mwas97@gmail.com</strong></span></a>
+          <a class="contact-link" href="https://linkedin.com/in/samuel-mwangi-11597a245" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i><span><small>LinkedIn</small><strong>Samuel Mwangi</strong></span></a>
+          <a class="contact-link" href="https://github.com/scriptedSyntax" target="_blank" rel="noopener"><i class="bi bi-github"></i><span><small>GitHub</small><strong>scriptedSyntax</strong></span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top" title="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <div class="opportunity-modal" id="opportunityModal" role="dialog" aria-modal="true" aria-labelledby="opportunityTitle" aria-hidden="true">
+    <div class="opportunity-dialog">
+      <button class="dialog-close" id="closeOpportunity" type="button" aria-label="Close opportunity prompt"><i class="bi bi-x-lg"></i></button>
+      <div class="dialog-mark"><i class="bi bi-briefcase"></i></div>
+      <span class="label">Opportunity</span>
+      <h2 id="opportunityTitle">Looking for someone who can build beyond the demo?</h2>
+      <p>I work across full-stack software, automation, healthcare technology and device integration. Let’s discuss the role, project or product you need delivered.</p>
+      <div class="dialog-actions">
+        <a class="btn btn-primary" href="mailto:samuel.mwas97@gmail.com?subject=Opportunity%20Discussion%20-%20Samuel%20Mwangi">Email Opportunity <i class="bi bi-arrow-right"></i></a>
+        <a class="btn btn-secondary" href="tel:+254799594621"><i class="bi bi-telephone"></i> Call</a>
+        <a class="btn btn-secondary" href="https://linkedin.com/in/samuel-mwangi-11597a245" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <small class="dialog-note">Full-Stack Development · Systems Engineering · Device R&amp;D</small>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <p>© 2026 Samuel Mwangi Ngonjo · Full-Stack Developer & Systems Engineer</p>
+      <nav class="footer-links" aria-label="Social links">
+        <a href="https://scriptedsyntax.github.io/portfolio/" target="_blank" rel="noopener">Portfolio</a>
+        <a href="https://github.com/scriptedSyntax" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/samuel-mwangi-11597a245" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const toggle = document.getElementById('themeToggle');
+      const icon = document.getElementById('themeIcon');
+      const themeColor = document.getElementById('themeColor');
+      const featureIsland = document.getElementById('featureIsland');
+      const featureButtons = document.querySelectorAll('.hero-tags button');
+      const storedTheme = localStorage.getItem('samuel-portfolio-theme');
+      const initialTheme = storedTheme || 'dark';
+      let islandTimer;
+
+      function applyTheme(theme) {
+        root.dataset.theme = theme;
+        const isDark = theme === 'dark';
+        icon.className = isDark ? 'bi bi-sun' : 'bi bi-moon-stars';
+        toggle.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
+        themeColor.setAttribute('content', isDark ? '#0e1512' : '#e9e5dc');
+        localStorage.setItem('samuel-portfolio-theme', theme);
+      }
+
+      applyTheme(initialTheme);
+      toggle.addEventListener('click', () => applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
+
+      featureButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          window.clearTimeout(islandTimer);
+          featureButtons.forEach((item) => item.classList.remove('is-active'));
+          button.classList.remove('is-pressed');
+          void button.offsetWidth;
+          button.classList.add('is-active');
+          button.classList.add('is-pressed');
+          featureIsland.textContent = button.dataset.note;
+          featureIsland.classList.add('is-visible');
+          window.setTimeout(() => button.classList.remove('is-pressed'), 560);
+          islandTimer = window.setTimeout(() => featureIsland.classList.remove('is-visible'), 2200);
+        });
+      });
+
+      const revealItems = document.querySelectorAll('[data-reveal]');
+      if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.13, rootMargin: '0px 0px -34px 0px' });
+        revealItems.forEach((item) => observer.observe(item));
+      } else {
+        revealItems.forEach((item) => item.classList.add('is-visible'));
+      }
+
+      const progress = document.querySelector('.progress');
+      let targetBgOffset = 0;
+      let currentBgOffset = 0;
+      let bgFrame = null;
+      const smoothBackground = () => {
+        currentBgOffset += (targetBgOffset - currentBgOffset) * 0.075;
+        if (Math.abs(targetBgOffset - currentBgOffset) < 0.05) currentBgOffset = targetBgOffset;
+        document.body.style.setProperty('--bg-offset', currentBgOffset.toFixed(2) + 'px');
+        bgFrame = currentBgOffset === targetBgOffset ? null : window.requestAnimationFrame(smoothBackground);
+      };
+      const updateScroll = () => {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        const amount = max > 0 ? (window.scrollY / max) * 100 : 0;
+        progress.style.setProperty('--scroll', amount + '%');
+        targetBgOffset = Math.max(0, window.scrollY - 20) * 0.08;
+        if (!bgFrame) bgFrame = window.requestAnimationFrame(smoothBackground);
+      };
+      const backToTop = document.getElementById('backToTop');
+      const updateBackToTop = () => {
+        backToTop.classList.toggle('is-visible', window.scrollY > 520);
+      };
+      backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+      updateScroll();
+      updateBackToTop();
+      window.addEventListener('scroll', () => {
+        updateScroll();
+        updateBackToTop();
+      }, { passive: true });
+
+      const opportunityModal = document.getElementById('opportunityModal');
+      const closeOpportunity = document.getElementById('closeOpportunity');
+      const openOpportunity = () => {
+        opportunityModal.classList.add('is-open');
+        opportunityModal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+        closeOpportunity.focus();
+      };
+      const dismissOpportunity = () => {
+        opportunityModal.classList.remove('is-open');
+        opportunityModal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+      };
+      closeOpportunity.addEventListener('click', dismissOpportunity);
+      opportunityModal.addEventListener('click', (event) => {
+        if (event.target === opportunityModal) dismissOpportunity();
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && opportunityModal.classList.contains('is-open')) dismissOpportunity();
+      });
+
+      // No suppression flag: this prompt opens on every new page load.
+      window.setTimeout(openOpportunity, 60000);
+    })();
+  </script>
+</body>
+</html>
