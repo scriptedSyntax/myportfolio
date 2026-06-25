@@ -194,36 +194,41 @@
       filter: blur(18px); transition: opacity .18s ease, transform .18s ease;
     }
     .hero-tags button:hover, .hero-tags button:focus-visible {
-      transform: translateY(-5px); border-color: var(--accent); background: #20252b; outline: 0;
+      transform: translateY(-5px); border-color: var(--accent); background: #20252b; outline: 0; z-index: 320;
     }
     .hero-tags button:hover::before, .hero-tags button:focus-visible::before, .hero-tags button.is-active::before {
       opacity: .28; transform: scale(1.08);
     }
+    .hero-tags button.is-auto-active {
+      transform: translateY(-4px); border-color: var(--accent); background: #20252b;
+      box-shadow: 0 0 34px rgba(182, 231, 195, .14);
+    }
+    .hero-tags button.is-auto-active::before { opacity: .22; transform: scale(1.06); }
     .hero-tags button:active {
       transform: translateY(-1px) scale(.96);
       box-shadow: 0 0 0 6px rgba(182, 231, 195, .10), 0 0 42px rgba(182, 231, 195, .22);
     }
-    .hero-tags button:nth-child(1):hover, .hero-tags button:nth-child(1):focus-visible, .hero-tags button:nth-child(1).is-active {
+    .hero-tags button:nth-child(1):hover, .hero-tags button:nth-child(1):focus-visible, .hero-tags button:nth-child(1).is-active, .hero-tags button:nth-child(1).is-auto-active {
       color: #75d7ff; border-color: #75d7ff; background: rgba(117, 215, 255, .14); box-shadow: 0 0 38px rgba(117, 215, 255, .16);
     }
-    .hero-tags button:nth-child(2):hover, .hero-tags button:nth-child(2):focus-visible, .hero-tags button:nth-child(2).is-active {
+    .hero-tags button:nth-child(2):hover, .hero-tags button:nth-child(2):focus-visible, .hero-tags button:nth-child(2).is-active, .hero-tags button:nth-child(2).is-auto-active {
       color: #7ee787; border-color: #7ee787; background: rgba(126, 231, 135, .14); box-shadow: 0 0 38px rgba(126, 231, 135, .16);
     }
-    .hero-tags button:nth-child(3):hover, .hero-tags button:nth-child(3):focus-visible, .hero-tags button:nth-child(3).is-active {
+    .hero-tags button:nth-child(3):hover, .hero-tags button:nth-child(3):focus-visible, .hero-tags button:nth-child(3).is-active, .hero-tags button:nth-child(3).is-auto-active {
       color: #f7c948; border-color: #f7c948; background: rgba(247, 201, 72, .14); box-shadow: 0 0 38px rgba(247, 201, 72, .16);
     }
-    .hero-tags button:nth-child(4):hover, .hero-tags button:nth-child(4):focus-visible, .hero-tags button:nth-child(4).is-active {
+    .hero-tags button:nth-child(4):hover, .hero-tags button:nth-child(4):focus-visible, .hero-tags button:nth-child(4).is-active, .hero-tags button:nth-child(4).is-auto-active {
       color: #b9a7ff; border-color: #b9a7ff; background: rgba(185, 167, 255, .14); box-shadow: 0 0 38px rgba(185, 167, 255, .16);
     }
-    .hero-tags button:nth-child(5):hover, .hero-tags button:nth-child(5):focus-visible, .hero-tags button:nth-child(5).is-active {
+    .hero-tags button:nth-child(5):hover, .hero-tags button:nth-child(5):focus-visible, .hero-tags button:nth-child(5).is-active, .hero-tags button:nth-child(5).is-auto-active {
       color: #ff8fb3; border-color: #ff8fb3; background: rgba(255, 143, 179, .14); box-shadow: 0 0 38px rgba(255, 143, 179, .16);
     }
-    .hero-tags button:nth-child(6):hover, .hero-tags button:nth-child(6):focus-visible, .hero-tags button:nth-child(6).is-active {
+    .hero-tags button:nth-child(6):hover, .hero-tags button:nth-child(6):focus-visible, .hero-tags button:nth-child(6).is-active, .hero-tags button:nth-child(6).is-auto-active {
       color: #b5f36b; border-color: #b5f36b; background: rgba(181, 243, 107, .14); box-shadow: 0 0 38px rgba(181, 243, 107, .16);
     }
     .hero-tags button::after {
       content: attr(data-note); position: fixed; left: 50%; top: 86px; transform: translate(-50%, -8px) scale(.96);
-      opacity: 0; pointer-events: none; z-index: 250; white-space: nowrap;
+      opacity: 0; pointer-events: none; z-index: 500; white-space: nowrap;
       width: max-content; max-width: min(520px, calc(100vw - 32px)); white-space: normal; text-align: center;
       background: rgba(12, 14, 17, .88); color: #f4f5ef; border: 1px solid rgba(255,255,255,.12);
       border-radius: 999px; padding: 12px 18px; box-shadow: 0 18px 45px rgba(0,0,0,.34);
@@ -607,7 +612,6 @@
           </div>
         </div>
         <div class="hero-side right" data-reveal data-reveal-delay="2">
-          <p class="hero-copy">Full-stack developer and systems engineer creating polished frontend experiences, secure backend platforms, workflow automation, AI-assisted workflows and health-tech solutions for business operations.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#work"><i class="bi bi-rocket-takeoff"></i> Explore Live Work</a>
             <a class="btn btn-secondary" href="https://github.com/scriptedSyntax" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub Profile</a>
@@ -647,7 +651,6 @@
         <div class="section-heading" data-reveal>
           <span class="label">Professional Profile</span>
           <h2>Full products, built properly.</h2>
-          <p>I deliver end-to-end: clean interfaces, reliable data flows, secure APIs, automation and systems that support businesses and healthcare operations.</p>
         </div>
         <div class="cap-grid">
           <article class="cap-card" data-reveal>
@@ -683,7 +686,6 @@
         <div class="section-heading" data-reveal>
           <span class="label">Selected Work</span>
           <h2>Do not just read my CV. Visit the work.</h2>
-          <p>Live business websites and public development projects that show frontend execution, backend thinking and a practical product mindset.</p>
         </div>
         <div class="work-grid">
           <a class="project live" href="https://ledanieconstruction.com/" target="_blank" rel="noopener" data-reveal>
@@ -725,7 +727,6 @@
         <div class="visit-panel" data-reveal>
           <div>
             <h3>Review the build, not only the job title.</h3>
-            <p>Visit the public sites and repositories to see how I think about products, systems and delivery.</p>
           </div>
           <a class="btn btn-primary" href="https://github.com/scriptedSyntax" target="_blank" rel="noopener">Open GitHub <i class="bi bi-arrow-up-right"></i></a>
         </div>
@@ -794,7 +795,6 @@
         <div class="section-heading" data-reveal>
           <span class="label">Technology Stack</span>
           <h2>Full-stack capability with backend depth.</h2>
-          <p>The interface matters. The system underneath matters more. I work across both layers to produce usable and dependable digital products.</p>
         </div>
         <div class="stack-grid">
           <article class="stack-card" data-reveal>
@@ -884,10 +884,37 @@
       const featureIsland = document.getElementById('featureIsland');
       const featureButtons = document.querySelectorAll('.hero-tags button');
       let islandTimer;
+      let autoFeatureTimer;
+      let lastAutoFeature = -1;
+
+      const clearAutoFeature = () => {
+        featureButtons.forEach((item) => item.classList.remove('is-auto-active'));
+      };
+
+      const selectRandomFeature = () => {
+        if (!featureButtons.length) return;
+        let next = Math.floor(Math.random() * featureButtons.length);
+        if (featureButtons.length > 1) {
+          while (next === lastAutoFeature) next = Math.floor(Math.random() * featureButtons.length);
+        }
+        lastAutoFeature = next;
+        clearAutoFeature();
+        featureButtons[next].classList.add('is-auto-active');
+      };
+
+      const startAutoFeatureCycle = () => {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        selectRandomFeature();
+        autoFeatureTimer = window.setInterval(selectRandomFeature, 1700);
+      };
 
       featureButtons.forEach((button) => {
+        button.addEventListener('mouseenter', clearAutoFeature);
+        button.addEventListener('focus', clearAutoFeature);
         button.addEventListener('click', () => {
           window.clearTimeout(islandTimer);
+          window.clearInterval(autoFeatureTimer);
+          clearAutoFeature();
           featureButtons.forEach((item) => item.classList.remove('is-active'));
           button.classList.remove('is-pressed');
           void button.offsetWidth;
@@ -896,9 +923,13 @@
           featureIsland.textContent = button.dataset.note;
           featureIsland.classList.add('is-visible');
           window.setTimeout(() => button.classList.remove('is-pressed'), 560);
-          islandTimer = window.setTimeout(() => featureIsland.classList.remove('is-visible'), 2200);
+          islandTimer = window.setTimeout(() => {
+            featureIsland.classList.remove('is-visible');
+            startAutoFeatureCycle();
+          }, 2200);
         });
       });
+      startAutoFeatureCycle();
 
       const revealItems = document.querySelectorAll('[data-reveal]');
       if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
