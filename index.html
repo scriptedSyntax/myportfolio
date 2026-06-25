@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0e1512" id="themeColor" />
+  <meta name="theme-color" content="#0e1512" />
   <title>Samuel Mwangi Ngonjo | Full-Stack Developer & Systems Engineer</title>
   <meta name="description" content="Samuel Mwangi Ngonjo is a full-stack developer and systems engineer building polished interfaces, reliable backend platforms, automation workflows and health-tech solutions." />
   <meta property="og:title" content="Samuel Mwangi Ngonjo | Full-Stack Developer & Systems Engineer" />
-  <meta property="og:description" content="Frontend clarity. Backend depth. Complete digital products built for real operations." />
+  <meta property="og:description" content="Frontend clarity. Backend depth. Complete digital products built for business and healthcare operations." />
   <meta property="og:type" content="website" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='17' fill='%23101a16'/%3E%3Cpath d='M18 21h28v5H24v5h17v5H24v7h22v5H18z' fill='%237aa98a'/%3E%3Ccircle cx='48' cy='18' r='5' fill='%239ac6a4'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,11 +17,11 @@
   <style>
     :root {
       --bg: #0e1512;
-      --bg-alt: #111a16;
-      --surface: #151f1b;
-      --surface-2: #171d22;
-      --surface-3: #20272d;
-      --raised: rgba(24, 29, 34, .82);
+      --bg-alt: rgba(17, 26, 22, .72);
+      --surface: rgba(21, 31, 27, .66);
+      --surface-2: rgba(23, 29, 34, .62);
+      --surface-3: rgba(32, 39, 45, .60);
+      --raised: rgba(24, 29, 34, .62);
       --line: rgba(154, 187, 171, .18);
       --line-strong: rgba(159, 219, 188, .32);
       --text: #ece9e2;
@@ -30,49 +30,19 @@
       --accent: #7bbd9b;
       --accent-strong: #b6e7c3;
       --accent-soft: #1a3025;
-      --accent-deep: #13261d;
-      --chip: #1c2923;
+      --accent-deep: rgba(19, 38, 29, .64);
+      --chip: rgba(28, 41, 35, .62);
       --shadow: rgba(0, 0, 0, .36);
       --header-bg: rgba(14, 21, 18, .88);
       --terminal: #101814;
       --success: #85bf92;
-      --green-card: rgba(18, 38, 31, .78);
-      --green-card-2: rgba(26, 48, 40, .76);
-      --green-card-3: rgba(34, 57, 47, .76);
-      --deep-card: rgba(9, 14, 16, .84);
+      --green-card: rgba(18, 38, 31, .58);
+      --green-card-2: rgba(26, 48, 40, .54);
+      --green-card-3: rgba(34, 57, 47, .54);
+      --deep-card: rgba(9, 14, 16, .62);
       --deep-text: #eef0ea;
       --deep-muted: #b3c2b9;
       --overlay: rgba(4, 10, 7, .70);
-    }
-
-    html[data-theme="light"] {
-      --bg: #e9e5dc;
-      --bg-alt: #e2ddd2;
-      --surface: #f1ede4;
-      --surface-2: #e4e0d5;
-      --surface-3: #d9d5ca;
-      --raised: #f5f1e9;
-      --line: #cdc8bc;
-      --line-strong: #aebbaf;
-      --text: #18211d;
-      --muted: #57645d;
-      --subtle: #707c75;
-      --accent: #276044;
-      --accent-strong: #1f5139;
-      --accent-soft: #d5ded4;
-      --accent-deep: #c9d7cb;
-      --chip: #dfdbd0;
-      --shadow: rgba(34, 43, 37, .10);
-      --header-bg: rgba(233, 229, 220, .92);
-      --terminal: #18231e;
-      --success: #276044;
-      --green-card: #d5dfd3;
-      --green-card-2: #c5d3c6;
-      --green-card-3: #23382f;
-      --deep-card: #1a2a24;
-      --deep-text: #f1efe8;
-      --deep-muted: #c1cec6;
-      --overlay: rgba(20, 28, 24, .58);
     }
 
     * { box-sizing: border-box; }
@@ -91,12 +61,15 @@
       left: 0;
       right: 0;
       top: 0;
-      height: 145vh;
+      height: 165vh;
       pointer-events: none;
-      background:
-        linear-gradient(180deg, rgba(8,12,11,.30), rgba(8,12,11,.50) 42%, rgba(8,12,11,.68)),
-        radial-gradient(circle at 50% 18%, rgba(118,188,215,.14), transparent 42%),
-        url("https://raw.githubusercontent.com/scriptedSyntax/myportfolio/main/hero-space-coder.png") center top / cover no-repeat;
+      background-image:
+        linear-gradient(180deg, rgba(8,12,11,.08), rgba(8,12,11,.18) 42%, rgba(8,12,11,.30)),
+        radial-gradient(circle at 50% 18%, rgba(118,188,215,.07), transparent 42%),
+        url("https://raw.githubusercontent.com/scriptedSyntax/myportfolio/main/hero-space-coder.png");
+      background-position: center top, center top, center top;
+      background-size: auto, auto, min(100vw, 1500px) auto;
+      background-repeat: no-repeat;
       border-top: 1px solid transparent;
       z-index: -1;
       transform: translate3d(0, calc(var(--bg-offset, 0px) * -1), 0);
@@ -110,14 +83,14 @@
     ul { padding: 0; margin: 0; list-style: none; }
     .mono { font-family: "JetBrains Mono", monospace; }
     .shell { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
-    .section { padding: 92px 0; position: relative; background: rgba(9, 14, 13, .34); }
+    .section { padding: 92px 0; position: relative; background: rgba(9, 14, 13, .18); }
     .section::before {
       content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
       width: min(520px, 58vw); height: 1px; pointer-events: none;
       background: linear-gradient(90deg, transparent, rgba(182,231,195,.58), transparent);
       filter: blur(.25px);
     }
-    .section.alt { background: rgba(9, 14, 13, .34); border-block: 0; }
+    .section.alt { background: rgba(9, 14, 13, .16); border-block: 0; }
     .skip-link {
       position: absolute; top: -52px; left: 24px; z-index: 999;
       background: var(--accent); color: #0b1510; padding: 10px 14px; border-radius: 10px;
@@ -131,7 +104,7 @@
     .site-header {
       position: sticky; top: 0; z-index: 100;
       border-bottom: 0;
-      background: rgba(10, 14, 16, .70);
+      background: rgba(10, 14, 16, .54);
       backdrop-filter: blur(18px);
     }
     .nav {
@@ -181,8 +154,8 @@
     .hero::after {
       content: ""; position: absolute; inset: 0; z-index: -1;
       background:
-        linear-gradient(180deg, rgba(14,21,18,.24), rgba(14,21,18,.48) 45%, rgba(14,21,18,.70)),
-        radial-gradient(circle at 50% 18%, rgba(112,169,135,.18), transparent 42%);
+        linear-gradient(180deg, rgba(14,21,18,.10), rgba(14,21,18,.25) 45%, rgba(14,21,18,.46)),
+        radial-gradient(circle at 50% 18%, rgba(112,169,135,.12), transparent 42%);
     }
     .hero-grid { display: grid; grid-template-columns: minmax(0, 760px); justify-content: center; gap: 24px; text-align: center; }
     .hero-side { min-width: 0; display: grid; justify-items: center; }
@@ -251,7 +224,8 @@
     .hero-tags button::after {
       content: attr(data-note); position: fixed; left: 50%; top: 86px; transform: translate(-50%, -8px) scale(.96);
       opacity: 0; pointer-events: none; z-index: 250; white-space: nowrap;
-      background: rgba(12, 14, 17, .94); color: #f4f5ef; border: 1px solid rgba(255,255,255,.12);
+      width: max-content; max-width: min(520px, calc(100vw - 32px)); white-space: normal; text-align: center;
+      background: rgba(12, 14, 17, .88); color: #f4f5ef; border: 1px solid rgba(255,255,255,.12);
       border-radius: 999px; padding: 12px 18px; box-shadow: 0 18px 45px rgba(0,0,0,.34);
       font-size: 13px; font-weight: 700; letter-spacing: -.01em; transition: opacity .18s ease, transform .18s ease;
     }
@@ -261,13 +235,14 @@
     .feature-island {
       position: fixed; left: 50%; top: 86px; transform: translate(-50%, -8px) scale(.96);
       opacity: 0; pointer-events: none; z-index: 260;
-      background: rgba(12, 14, 17, .96); color: #f4f5ef; border: 1px solid rgba(255,255,255,.13);
+      width: max-content; max-width: min(520px, calc(100vw - 32px)); text-align: center;
+      background: rgba(12, 14, 17, .90); color: #f4f5ef; border: 1px solid rgba(255,255,255,.13);
       border-radius: 999px; padding: 12px 18px; box-shadow: 0 18px 45px rgba(0,0,0,.34);
       font-size: 13px; font-weight: 700; transition: opacity .18s ease, transform .18s ease;
     }
     .feature-island.is-visible { opacity: 1; transform: translate(-50%, 0) scale(1); }
     .code-card {
-      position: relative; padding: 7px; background: rgba(16, 18, 21, .86); border: 1px solid rgba(190, 224, 210, .18);
+      position: relative; padding: 7px; background: rgba(16, 18, 21, .68); border: 1px solid rgba(190, 224, 210, .18);
       border-radius: 5px; box-shadow: 0 25px 70px rgba(0,0,0,.38); width: min(100%, 660px); justify-self: center;
     }
     .terminal {
@@ -290,7 +265,7 @@
     .cursor { display: inline-block; width: 8px; height: 16px; vertical-align: -3px; margin-left: 4px; background: #91c09c; animation: blink 1s step-end infinite; }
     .floating-status {
       position: absolute; right: -19px; bottom: 54px; display: flex; align-items: center; gap: 11px;
-      background: rgba(16, 18, 21, .78); border: 1px solid var(--line-strong); border-radius: 9px; padding: 12px 15px;
+      background: rgba(16, 18, 21, .62); border: 1px solid var(--line-strong); border-radius: 9px; padding: 12px 15px;
       box-shadow: 0 12px 36px var(--shadow); animation: float 5s ease-in-out infinite;
     }
     .floating-status i { color: var(--accent-strong); font-size: 19px; }
@@ -300,7 +275,7 @@
     .confidence { padding: 32px 0 68px; }
     .confidence-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
     .metric {
-      background: rgba(21, 31, 27, .76); border: 1px solid var(--line); border-radius: 9px; padding: 20px 18px;
+      background: rgba(21, 31, 27, .58); border: 1px solid var(--line); border-radius: 9px; padding: 20px 18px;
       min-height: 106px; transition: transform .22s ease, border-color .22s ease, background-color .22s ease;
     }
     .metric:nth-child(1) { background: var(--green-card); }
@@ -312,7 +287,7 @@
     .metric span { color: var(--muted); font-size: 13px; }
     .metric:nth-child(3) span { color: var(--deep-muted); }
 
-    .ticker { border-block: 0; background: rgba(10, 14, 16, .46); overflow: hidden; }
+    .ticker { border-block: 0; background: rgba(10, 14, 16, .28); overflow: hidden; }
     .ticker-track {
       display: flex; width: max-content; align-items: center; gap: 11px; padding: 17px 0;
       animation: ticker 27s linear infinite;
@@ -350,7 +325,7 @@
 
     .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
     .project {
-      border: 1px solid var(--line); border-radius: 9px; background: rgba(21, 31, 27, .82); padding: 25px;
+      border: 1px solid var(--line); border-radius: 9px; background: rgba(21, 31, 27, .62); padding: 25px;
       transition: transform .24s ease, border-color .24s ease, background-color .24s ease;
       display: flex; flex-direction: column; min-height: 309px;
     }
@@ -359,6 +334,8 @@
     .project:nth-child(4) { background: var(--green-card-2); }
     .project:hover { transform: translateY(-5px); border-color: var(--accent); }
     .project.live { border-color: var(--line-strong); }
+    .project.github-wide { grid-column: 1 / -1; }
+    .project.github-wide p { max-width: 760px; }
     .project.device {
       background: var(--deep-card); border-color: var(--line-strong); color: var(--deep-text);
     }
@@ -379,7 +356,7 @@
     .project-link i { transition: transform .18s ease; }
     .project:hover .project-link i { transform: translateX(4px); }
     .visit-panel {
-      margin-top: 18px; background: rgba(19, 38, 29, .70); border: 1px solid var(--line-strong); border-radius: 9px;
+      margin-top: 18px; background: rgba(19, 38, 29, .48); border: 1px solid var(--line-strong); border-radius: 9px;
       padding: 22px; display: flex; justify-content: space-between; align-items: center; gap: 22px;
     }
     .visit-panel h3 { font-size: 21px; margin-bottom: 5px; }
@@ -396,7 +373,7 @@
       filter: blur(.2px);
     }
     .job {
-      position: relative; border: 1px solid var(--line); border-radius: 9px; background: rgba(21, 31, 27, .82); padding: 24px;
+      position: relative; border: 1px solid var(--line); border-radius: 9px; background: rgba(21, 31, 27, .62); padding: 24px;
       transition: border-color .22s ease, transform .22s ease;
     }
     .job:nth-child(1) { background: var(--green-card); }
@@ -417,7 +394,7 @@
     .job li::before { content: ""; background: var(--accent); width: 5px; height: 5px; border-radius: 50%; margin-top: 9px; flex: 0 0 auto; }
 
     .stack-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-    .stack-card { border: 1px solid var(--line); border-radius: 9px; background: rgba(21, 31, 27, .82); padding: 22px; }
+    .stack-card { border: 1px solid var(--line); border-radius: 9px; background: rgba(21, 31, 27, .62); padding: 22px; }
     .stack-card:nth-child(1) { background: var(--green-card); }
     .stack-card:nth-child(2) { background: var(--surface-2); }
     .stack-card:nth-child(3) { background: var(--green-card-2); }
@@ -430,7 +407,7 @@
 
     .credentials { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 50px; }
     .credential {
-      border: 1px solid var(--line); border-radius: 9px; background: rgba(21, 31, 27, .82); padding: 23px;
+      border: 1px solid var(--line); border-radius: 9px; background: rgba(21, 31, 27, .62); padding: 23px;
       display: flex; gap: 16px; align-items: flex-start;
     }
     .credential:first-child { background: var(--green-card); }
@@ -442,7 +419,7 @@
 
     .contact-wrap {
       display: grid; grid-template-columns: 1fr .74fr; gap: 28px; align-items: center;
-      background: rgba(12, 15, 18, .72); border: 1px solid rgba(182,231,195,.20); border-radius: 9px; padding: clamp(27px, 5vw, 49px);
+      background: rgba(12, 15, 18, .54); border: 1px solid rgba(182,231,195,.20); border-radius: 9px; padding: clamp(27px, 5vw, 49px);
       box-shadow: 0 24px 70px rgba(0,0,0,.34); backdrop-filter: blur(16px);
     }
     .contact-wrap h2 { font-size: clamp(34px, 4.4vw, 49px); margin: 14px 0 16px; }
@@ -545,6 +522,10 @@
       .brand small { display: none; }
       .nav-actions .btn { display: none; }
       .hero { min-height: 120vh; padding-top: 62px; }
+      body::before {
+        height: 145vh;
+        background-size: auto, auto, cover;
+      }
       .hero h1 { font-size: clamp(38px, 12vw, 48px); }
       .hero-copy { font-size: 15px; }
       .hero-actions .btn { width: 100%; }
@@ -554,13 +535,14 @@
       }
       .terminal-body { font-size: 12px; min-height: 245px; overflow-x: auto; }
       .confidence-grid, .cap-grid, .work-grid, .stack-grid, .credentials { grid-template-columns: 1fr; }
+      .project.github-wide { grid-column: auto; }
       .project { min-height: 275px; }
       .visit-panel, .job-head, .footer-inner { flex-direction: column; align-items: flex-start; }
       .floating-status { position: static; margin-top: 15px; animation: none; }
     }
     @media print {
-      .site-header, .progress, .hero-actions, .ticker, .theme-toggle, .floating-status, .back-to-top, .opportunity-modal { display: none !important; }
-      body, html[data-theme="light"] body { background: #fff; color: #111; }
+      .site-header, .progress, .hero-actions, .ticker, .floating-status, .back-to-top, .opportunity-modal { display: none !important; }
+      body { background: #fff; color: #111; }
       .section, .hero { padding: 28px 0; }
       .project, .cap-card, .job, .stack-card, .contact-wrap, .metric { break-inside: avoid; border-color: #bbb; background: #fff; }
     }
@@ -588,9 +570,6 @@
         <a href="#contact">Contact</a>
       </nav>
       <div class="nav-actions">
-        <button class="icon-btn theme-toggle" type="button" id="themeToggle" aria-label="Switch to light theme" title="Toggle theme">
-          <i class="bi bi-sun" id="themeIcon"></i>
-        </button>
         <a class="btn btn-primary" href="#contact">Interview Me <i class="bi bi-arrow-right"></i></a>
       </div>
     </div>
@@ -601,7 +580,7 @@
       <div class="feature-island" id="featureIsland" aria-live="polite"></div>
       <div class="shell hero-grid">
         <div class="hero-side" data-reveal>
-          <h1>I build complete digital products — <span>interface to infrastructure.</span></h1>
+          <h1>Full-stack developer with backend depth, <span>AI programming and Business Central AL.</span></h1>
         </div>
         <div class="code-card" data-reveal data-reveal-delay="1">
           <div class="terminal">
@@ -610,14 +589,16 @@
               <span class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></span>
             </div>
             <div class="terminal-body mono">
-              <div><span class="t-green">$</span> build <span class="t-white">complete_product</span></div>
+              <div><span class="t-green">$</span> build <span class="t-white">full_stack_system</span></div>
               <div class="t-faded">→ Frontend:</div>
               <div>&nbsp;&nbsp;<span class="t-green">React</span> · UI engineering · Responsive delivery</div>
               <div class="t-faded">→ Backend:</div>
               <div>&nbsp;&nbsp;<span class="t-green">Python / Django</span> · REST APIs · Auth</div>
               <div class="t-faded">→ Systems:</div>
               <div>&nbsp;&nbsp;Automation · Data · Device integration</div>
-              <div><span class="t-green">✓</span> <span class="t-white">ready_for_real_operations</span><span class="cursor"></span></div>
+              <div class="t-faded">→ Business Apps:</div>
+              <div>&nbsp;&nbsp;<span class="t-green">Dynamics 365 Business Central</span> · AL basics</div>
+              <div><span class="t-green">✓</span> <span class="t-white">ready_for_business_operations</span><span class="cursor"></span></div>
             </div>
           </div>
           <div class="floating-status">
@@ -626,7 +607,7 @@
           </div>
         </div>
         <div class="hero-side right" data-reveal data-reveal-delay="2">
-          <p class="hero-copy">Full-stack developer and systems engineer creating polished frontend experiences, secure backend platforms, workflow automation and health-tech solutions for real operational needs.</p>
+          <p class="hero-copy">Full-stack developer and systems engineer creating polished frontend experiences, secure backend platforms, workflow automation, AI-assisted workflows and health-tech solutions for business operations.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#work"><i class="bi bi-rocket-takeoff"></i> Explore Live Work</a>
             <a class="btn btn-secondary" href="https://github.com/scriptedSyntax" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub Profile</a>
@@ -638,8 +619,8 @@
             <button type="button" aria-label="Django APIs" data-note="Django APIs: secure backend services"><i class="bi bi-database-gear"></i></button>
             <button type="button" aria-label="Automation" data-note="Automation: workflows that remove manual drag"><i class="bi bi-gear-wide-connected"></i></button>
             <button type="button" aria-label="Device integration" data-note="Device integration: hardware meets software"><i class="bi bi-cpu"></i></button>
-            <button type="button" aria-label="Healthcare R and D" data-note="Healthcare R&amp;D: clinical systems thinking"><i class="bi bi-heart-pulse"></i></button>
-            <button type="button" aria-label="AI integrations" data-note="AI integrations: practical intelligent workflows"><i class="bi bi-stars"></i></button>
+            <button type="button" aria-label="Dynamics 365 Business Central AL" data-note="Dynamics 365 Business Central and AL basics"><i class="bi bi-journal-code"></i></button>
+            <button type="button" aria-label="AI programming" data-note="AI programming: practical intelligent workflows"><i class="bi bi-stars"></i></button>
           </div>
         </div>
       </div>
@@ -650,14 +631,14 @@
         <div class="metric" data-reveal><strong>Full-Stack</strong><span>Frontend experiences and backend systems</span></div>
         <div class="metric" data-reveal data-reveal-delay="1"><strong>Freelance + Professional</strong><span>Practical delivery for public and internal products</span></div>
         <div class="metric" data-reveal data-reveal-delay="2"><strong>Device R&amp;D</strong><span>Hardware-software integration for clinical use</span></div>
-        <div class="metric" data-reveal data-reveal-delay="3"><strong>Live Work</strong><span>Websites and code available to review</span></div>
+        <div class="metric" data-reveal data-reveal-delay="3"><strong>Dynamics 365 / AL</strong><span>Business Central fundamentals and AL programming basics</span></div>
       </div>
     </section>
 
     <div class="ticker" aria-label="Technology stack">
       <div class="ticker-track mono">
-        <span class="tech-pill"><i class="bi bi-code-slash"></i> React</span><span class="tech-pill"><i class="bi bi-braces"></i> JavaScript</span><span class="tech-pill"><i class="bi bi-window"></i> HTML / CSS</span><span class="tech-pill"><i class="bi bi-terminal"></i> Python</span><span class="tech-pill"><i class="bi bi-server"></i> Django</span><span class="tech-pill"><i class="bi bi-lightning-charge"></i> FastAPI</span><span class="tech-pill"><i class="bi bi-diagram-3"></i> REST APIs</span><span class="tech-pill"><i class="bi bi-database"></i> PostgreSQL</span><span class="tech-pill"><i class="bi bi-fire"></i> Firebase</span><span class="tech-pill"><i class="bi bi-cloud"></i> Azure</span><span class="tech-pill"><i class="bi bi-box-seam"></i> Docker</span><span class="tech-pill"><i class="bi bi-github"></i> GitHub Actions</span><span class="tech-pill"><i class="bi bi-gear-wide-connected"></i> Automation</span><span class="tech-pill"><i class="bi bi-cpu"></i> Device Integration</span><span class="tech-pill"><i class="bi bi-stars"></i> AI Workflows</span>
-        <span class="tech-pill"><i class="bi bi-code-slash"></i> React</span><span class="tech-pill"><i class="bi bi-braces"></i> JavaScript</span><span class="tech-pill"><i class="bi bi-window"></i> HTML / CSS</span><span class="tech-pill"><i class="bi bi-terminal"></i> Python</span><span class="tech-pill"><i class="bi bi-server"></i> Django</span><span class="tech-pill"><i class="bi bi-lightning-charge"></i> FastAPI</span><span class="tech-pill"><i class="bi bi-diagram-3"></i> REST APIs</span><span class="tech-pill"><i class="bi bi-database"></i> PostgreSQL</span><span class="tech-pill"><i class="bi bi-fire"></i> Firebase</span><span class="tech-pill"><i class="bi bi-cloud"></i> Azure</span><span class="tech-pill"><i class="bi bi-box-seam"></i> Docker</span><span class="tech-pill"><i class="bi bi-github"></i> GitHub Actions</span><span class="tech-pill"><i class="bi bi-gear-wide-connected"></i> Automation</span><span class="tech-pill"><i class="bi bi-cpu"></i> Device Integration</span><span class="tech-pill"><i class="bi bi-stars"></i> AI Workflows</span>
+        <span class="tech-pill"><i class="bi bi-code-slash"></i> React</span><span class="tech-pill"><i class="bi bi-braces"></i> JavaScript</span><span class="tech-pill"><i class="bi bi-window"></i> HTML / CSS</span><span class="tech-pill"><i class="bi bi-terminal"></i> Python</span><span class="tech-pill"><i class="bi bi-server"></i> Django</span><span class="tech-pill"><i class="bi bi-lightning-charge"></i> FastAPI</span><span class="tech-pill"><i class="bi bi-diagram-3"></i> REST APIs</span><span class="tech-pill"><i class="bi bi-database"></i> PostgreSQL</span><span class="tech-pill"><i class="bi bi-fire"></i> Firebase</span><span class="tech-pill"><i class="bi bi-cloud"></i> Basic Azure App Services</span><span class="tech-pill"><i class="bi bi-journal-code"></i> Dynamics 365 Business Central</span><span class="tech-pill"><i class="bi bi-code-square"></i> AL Basics</span><span class="tech-pill"><i class="bi bi-github"></i> GitHub Actions</span><span class="tech-pill"><i class="bi bi-gear-wide-connected"></i> Automation</span><span class="tech-pill"><i class="bi bi-cpu"></i> Device Integration</span><span class="tech-pill"><i class="bi bi-stars"></i> AI Programming</span>
+        <span class="tech-pill"><i class="bi bi-code-slash"></i> React</span><span class="tech-pill"><i class="bi bi-braces"></i> JavaScript</span><span class="tech-pill"><i class="bi bi-window"></i> HTML / CSS</span><span class="tech-pill"><i class="bi bi-terminal"></i> Python</span><span class="tech-pill"><i class="bi bi-server"></i> Django</span><span class="tech-pill"><i class="bi bi-lightning-charge"></i> FastAPI</span><span class="tech-pill"><i class="bi bi-diagram-3"></i> REST APIs</span><span class="tech-pill"><i class="bi bi-database"></i> PostgreSQL</span><span class="tech-pill"><i class="bi bi-fire"></i> Firebase</span><span class="tech-pill"><i class="bi bi-cloud"></i> Basic Azure App Services</span><span class="tech-pill"><i class="bi bi-journal-code"></i> Dynamics 365 Business Central</span><span class="tech-pill"><i class="bi bi-code-square"></i> AL Basics</span><span class="tech-pill"><i class="bi bi-github"></i> GitHub Actions</span><span class="tech-pill"><i class="bi bi-gear-wide-connected"></i> Automation</span><span class="tech-pill"><i class="bi bi-cpu"></i> Device Integration</span><span class="tech-pill"><i class="bi bi-stars"></i> AI Programming</span>
       </div>
     </div>
 
@@ -665,8 +646,8 @@
       <div class="shell">
         <div class="section-heading" data-reveal>
           <span class="label">Professional Profile</span>
-          <h2>Not just backend. Full products, built properly.</h2>
-          <p>I prefer backend depth, but I deliver end-to-end: clean interfaces, reliable data flows, secure APIs, automation and systems that support real businesses and healthcare operations.</p>
+          <h2>Full products, built properly.</h2>
+          <p>I deliver end-to-end: clean interfaces, reliable data flows, secure APIs, automation and systems that support businesses and healthcare operations.</p>
         </div>
         <div class="cap-grid">
           <article class="cap-card" data-reveal>
@@ -726,11 +707,18 @@
             <div class="project-stack"><span>Hardware + Software</span><span>Clinical Device</span><span>Integration</span><span>R&amp;D</span></div>
             <span class="project-link">Visit GONEP <i class="bi bi-arrow-right"></i></span>
           </a>
-          <a class="project" href="https://github.com/scriptedSyntax" target="_blank" rel="noopener" data-reveal data-reveal-delay="1">
+          <a class="project" href="https://github.com/scriptedSyntax/business-central-al-book-management" target="_blank" rel="noopener" data-reveal data-reveal-delay="1">
+            <div class="project-top"><span class="tag"><i class="bi bi-journal-code"></i> Business Central / AL</span><i class="bi bi-box-arrow-up-right out-icon"></i></div>
+            <h3>Business Central AL Book Management System</h3>
+            <p>Completed AL-based Business Central project demonstrating records, pages, lists, actions, basic business logic and structured data handling.</p>
+            <div class="project-stack"><span>Dynamics 365 BC</span><span>AL Basics</span><span>Business Logic</span><span>Records & Pages</span></div>
+            <span class="project-link">Open GitHub project <i class="bi bi-arrow-right"></i></span>
+          </a>
+          <a class="project github-wide" href="https://github.com/scriptedSyntax" target="_blank" rel="noopener" data-reveal data-reveal-delay="1">
             <div class="project-top"><span class="tag">Open Source & Builds</span><i class="bi bi-box-arrow-up-right out-icon"></i></div>
             <h3>GitHub Projects</h3>
-            <p>Explore public projects including a Django backend foundation, a Symptom Checker application, Python projects and a Bulk SMS System.</p>
-            <div class="project-stack"><span>Django</span><span>JavaScript</span><span>Python</span><span>Systems</span></div>
+            <p>Explore public projects including Django backend foundations, AI-assisted applications, Python projects and a Bulk SMS System.</p>
+            <div class="project-stack"><span>Django</span><span>JavaScript</span><span>Python</span><span>AI Programming</span></div>
             <span class="project-link">Browse repositories <i class="bi bi-arrow-right"></i></span>
           </a>
         </div>
@@ -767,7 +755,7 @@
           <article class="job" data-reveal>
             <div class="job-head">
               <div><h3>Senior Software Developer</h3><div class="company">Gonep Pharmaceuticals</div></div>
-              <time>Aug 2025 — Dec 2025</time>
+              <time>Aug 2025 — May 2026</time>
             </div>
             <ul>
               <li>Built internal web applications and backend systems supporting automation, operational workflows and scalable data handling.</li>
@@ -793,7 +781,7 @@
             </div>
             <ul>
               <li>Maintained, diagnosed and supported clinical equipment in active healthcare environments.</li>
-              <li>Applied equipment tracking, SOP documentation and preventive-maintenance thinking to real operations.</li>
+              <li>Applied equipment tracking, SOP documentation and preventive-maintenance thinking to healthcare operations.</li>
               <li>Built the systems discipline now applied to dependable healthcare software, device integration and research-led development.</li>
             </ul>
           </article>
@@ -822,18 +810,18 @@
           <article class="stack-card" data-reveal data-reveal-delay="2">
             <i class="bi bi-cloud-check stack-icon"></i>
             <h3>Data & Delivery</h3>
-            <ul><li>PostgreSQL, MySQL, Firebase</li><li>Azure App Services</li><li>GitHub Actions & Docker</li><li>Linux & Git workflows</li></ul>
+            <ul><li>PostgreSQL, MySQL, Firebase</li><li>Basic Azure App Services</li><li>GitHub Actions</li><li>Linux & Git workflows</li></ul>
           </article>
           <article class="stack-card" data-reveal data-reveal-delay="3">
             <i class="bi bi-cpu stack-icon"></i>
             <h3>Systems & AI</h3>
-            <ul><li>Workflow automation</li><li>AI-enabled systems</li><li>Device integration &amp; R&amp;D</li><li>Health-tech digitisation</li></ul>
+            <ul><li>Workflow automation</li><li>AI programming</li><li>Dynamics 365 Business Central &amp; AL basics</li><li>Device integration &amp; R&amp;D</li></ul>
           </article>
         </div>
         <div class="credentials">
           <article class="credential" data-reveal>
             <i class="bi bi-mortarboard"></i>
-            <div><h3>Diploma in Medical Engineering Technology</h3><p>Kenya Medical Training College — 2024. Clinical engineering, health informatics, electronics and medical-device systems.</p></div>
+            <div><h3>Diploma in Medical Engineering Technology</h3><p>Kenya Medical Training College — Awarded Dec 2024. Clinical engineering, health informatics, electronics and medical-device systems.</p></div>
           </article>
           <article class="credential" data-reveal data-reveal-delay="1">
             <i class="bi bi-patch-check"></i>
@@ -893,27 +881,9 @@
 
   <script>
     (() => {
-      const root = document.documentElement;
-      const toggle = document.getElementById('themeToggle');
-      const icon = document.getElementById('themeIcon');
-      const themeColor = document.getElementById('themeColor');
       const featureIsland = document.getElementById('featureIsland');
       const featureButtons = document.querySelectorAll('.hero-tags button');
-      const storedTheme = localStorage.getItem('samuel-portfolio-theme');
-      const initialTheme = storedTheme || 'dark';
       let islandTimer;
-
-      function applyTheme(theme) {
-        root.dataset.theme = theme;
-        const isDark = theme === 'dark';
-        icon.className = isDark ? 'bi bi-sun' : 'bi bi-moon-stars';
-        toggle.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
-        themeColor.setAttribute('content', isDark ? '#0e1512' : '#e9e5dc');
-        localStorage.setItem('samuel-portfolio-theme', theme);
-      }
-
-      applyTheme(initialTheme);
-      toggle.addEventListener('click', () => applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
 
       featureButtons.forEach((button) => {
         button.addEventListener('click', () => {
@@ -950,7 +920,7 @@
       let currentBgOffset = 0;
       let bgFrame = null;
       const smoothBackground = () => {
-        currentBgOffset += (targetBgOffset - currentBgOffset) * 0.075;
+        currentBgOffset += (targetBgOffset - currentBgOffset) * 0.16;
         if (Math.abs(targetBgOffset - currentBgOffset) < 0.05) currentBgOffset = targetBgOffset;
         document.body.style.setProperty('--bg-offset', currentBgOffset.toFixed(2) + 'px');
         bgFrame = currentBgOffset === targetBgOffset ? null : window.requestAnimationFrame(smoothBackground);
@@ -959,14 +929,37 @@
         const max = document.documentElement.scrollHeight - window.innerHeight;
         const amount = max > 0 ? (window.scrollY / max) * 100 : 0;
         progress.style.setProperty('--scroll', amount + '%');
-        targetBgOffset = Math.max(0, window.scrollY - 20) * 0.08;
+        targetBgOffset = Math.max(0, window.scrollY - 20) * 0.12;
         if (!bgFrame) bgFrame = window.requestAnimationFrame(smoothBackground);
       };
       const backToTop = document.getElementById('backToTop');
       const updateBackToTop = () => {
         backToTop.classList.toggle('is-visible', window.scrollY > 520);
       };
-      backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+      const fastScrollTo = (targetY, duration = 430) => {
+        const startY = window.scrollY;
+        const distance = targetY - startY;
+        const startTime = performance.now();
+        const easeOutCubic = (value) => 1 - Math.pow(1 - value, 3);
+
+        const step = (now) => {
+          const progress = Math.min((now - startTime) / duration, 1);
+          window.scrollTo(0, startY + distance * easeOutCubic(progress));
+          if (progress < 1) window.requestAnimationFrame(step);
+        };
+
+        window.requestAnimationFrame(step);
+      };
+
+      document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener('click', (event) => {
+          const target = document.querySelector(link.getAttribute('href'));
+          if (!target) return;
+          event.preventDefault();
+          fastScrollTo(target.getBoundingClientRect().top + window.scrollY);
+        });
+      });
+      backToTop.addEventListener('click', () => fastScrollTo(0));
 
       updateScroll();
       updateBackToTop();
