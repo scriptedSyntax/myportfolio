@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0e1512" />
-  <title>Samuel Mwangi Ngonjo | Software Developer</title>
-  <meta name="description" content="Samuel Mwangi Ngonjo builds websites, web applications and practical digital systems across business operations, automation, AI and healthcare." />
-  <meta property="og:title" content="Samuel Mwangi Ngonjo | Software Developer" />
-  <meta property="og:description" content="Full-stack developer building useful digital products, business systems and workflow automation, backed by a biomedical engineering perspective." />
+  <title>Samuel Mwangi | Software Developer</title>
+  <meta name="description" content="We bring businesses to life with websites, digital products, and internal or customer-facing systems that simplify work, connect services, and support growth." />
+  <meta property="og:title" content="Samuel Mwangi samuel-mwangi-cv-developer| Software Developer" />
+  <meta property="og:description" content="We bring businesses to life with websites, digital products, and internal or customer-facing systems that simplify work, connect services, and support growth." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://scriptedsyntax.github.io/myportfolio/" />
   <meta property="og:image" content="https://scriptedsyntax.github.io/myportfolio/og-image.webp?v=20261030" />
@@ -15,12 +15,12 @@
   <meta property="og:image:type" content="image/webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Samuel Mwangi Ngonjo software developer portfolio preview image" />
+  <meta property="og:image:alt" content="Samuel Mwangi samuel-mwangi-cv-developersoftware developer portfolio preview image" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Samuel Mwangi Ngonjo | Software Developer" />
-  <meta name="twitter:description" content="Full-stack developer building useful digital products, business systems and workflow automation, backed by a biomedical engineering perspective." />
+  <meta name="twitter:title" content="Samuel Mwangi samuel-mwangi-cv-developer| Software Developer" />
+  <meta name="twitter:description" content="We bring businesses to life with websites, digital products, and internal or customer-facing systems that simplify work, connect services, and support growth." />
   <meta name="twitter:image" content="https://scriptedsyntax.github.io/myportfolio/og-image.webp?v=20261030" />
-  <meta name="twitter:image:alt" content="Samuel Mwangi Ngonjo software developer portfolio preview image" />
+  <meta name="twitter:image:alt" content="Samuel Mwangi samuel-mwangi-cv-developersoftware developer portfolio preview image" />
   <link rel="preload" as="image" href="hero-space-coder.webp" type="image/webp" fetchpriority="high" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='17' fill='%23101a16'/%3E%3Cpath d='M18 21h28v5H24v5h17v5H24v7h22v5H18z' fill='%237aa98a'/%3E%3Ccircle cx='48' cy='18' r='5' fill='%239ac6a4'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -366,25 +366,27 @@
     .project-link i { transition: transform .18s ease; }
     .project:hover .project-link i { transform: translateX(4px); }
     .project-preview { display: block; flex: 0 0 auto; align-self: stretch; min-width: 0; width: 100%; height: auto; margin: 0 0 22px; overflow: hidden; border: 0; border-radius: 8px; background: transparent; }
-    .project-preview iframe { display: block; width: 100%; height: 100%; border: 0; background: #fff; }
-    .preview-placeholder { position: relative; display: block; width: 100%; height: auto; min-height: 0; overflow: hidden; border: 0; border-radius: 8px; padding: 0; color: #f2f4ef; background: transparent; text-align: center; cursor: pointer; }
-    .preview-placeholder img { display: block; width: 100%; height: auto; object-fit: contain; object-position: center; }
-    .preview-placeholder .preview-label { position: absolute; z-index: 1; top: 50%; left: 50%; transform: translate(-50%, -50%); display: inline-flex; align-items: center; gap: 9px; border: 1px solid rgba(255,255,255,.45); border-radius: 999px; padding: 13px 19px; color: #fff; background: rgba(10,18,15,.78); box-shadow: 0 8px 24px rgba(0,0,0,.22); font-weight: 700; white-space: nowrap; }
-    .preview-placeholder:focus-visible { outline: 3px solid var(--accent); outline-offset: -5px; }
-    .preview-mark { width: 58px; height: 58px; display: grid; place-items: center; border-radius: 16px; color: #438154; background: #e2eee4; font-size: 26px; }
-    .preview-placeholder strong { font-size: 23px; }
-    .preview-placeholder span { max-width: 420px; color: #66786b; font-size: 15px; }
+    .preview-thumb { display: block; min-width: 0; width: 100%; overflow: hidden; border: 0; border-radius: 8px; padding: 0; background: #0c1210; cursor: pointer; }
+    .preview-thumb.has-watch-demo { position: relative; }
+    .watch-demo-label { position: absolute; top: 50%; left: 50%; display: inline-flex; align-items: center; gap: 9px; transform: translate(-50%, -50%); border: 1px solid rgba(255,255,255,.45); border-radius: 999px; padding: 12px 18px; color: #fff; background: rgba(10,18,15,.82); box-shadow: 0 8px 24px rgba(0,0,0,.24); font-size: 14px; font-weight: 700; white-space: nowrap; pointer-events: none; }
+    .preview-thumb:focus-visible { outline: 3px solid var(--accent); outline-offset: -5px; }
+    .preview-thumb img, .preview-thumb video { display: block; width: 100%; height: auto; object-fit: contain; object-position: center; }
+    .project-gallery-track { display: flex; gap: 12px; overflow-x: auto; padding: 0 0 10px; scroll-snap-type: x mandatory; scrollbar-color: var(--accent) var(--surface-2); }
+    .project-gallery-track .preview-thumb { flex: 0 0 100%; scroll-snap-align: start; }
     .preview-modal { position: fixed; inset: 0; z-index: 500; display: grid; place-items: center; padding: 3vh 3vw; background: rgba(3,8,7,.84); backdrop-filter: blur(8px); opacity: 0; visibility: hidden; transition: opacity .2s ease, visibility .2s ease; }
     .preview-modal.is-open { opacity: 1; visibility: visible; }
-    .preview-dialog { width: min(1500px, 100%); height: min(92vh, 100%); display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--line-strong); border-radius: 12px; background: white; box-shadow: 0 24px 80px rgba(0,0,0,.55); }
+    .preview-dialog { width: min(1500px, 100%); height: min(92vh, 100%); display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--line-strong); border-radius: 12px; background: #0c1210; box-shadow: 0 24px 80px rgba(0,0,0,.55); }
     .preview-dialog-head { min-height: 58px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 8px 14px 8px 20px; color: #24332a; background: white; border-bottom: 1px solid #dfe6e0; }
     .preview-dialog-actions { display: flex; align-items: center; gap: 14px; }
     .preview-open-link { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 9px 13px; border: 1px solid #7eaa89; border-radius: 8px; color: #285b36; background: #f2f8f3; font-size: 13px; font-weight: 700; transition: background .18s ease, border-color .18s ease, transform .18s ease; }
     .preview-open-link:hover { border-color: #438154; background: #e4f1e6; transform: translateY(-1px); }
     .preview-open-link:focus-visible { outline: 3px solid #438154; outline-offset: 3px; }
     .preview-dialog-close { width: 38px; height: 38px; border: 1px solid #dfe6e0; border-radius: 8px; color: #24332a; background: white; cursor: pointer; }
-    .preview-status { padding: 8px 16px; color: #56665b; background: #f4f8f4; font-size: 12px; }
-    .preview-frame { flex: 1; width: 100%; min-height: 0; border: 0; background: white; }
+    .preview-media { flex: 1; min-height: 0; overflow: hidden; background: #0c1210; }
+    .preview-gallery { display: flex; align-items: center; gap: 14px; width: 100%; height: 100%; overflow-x: auto; overflow-y: hidden; padding: 18px; scroll-snap-type: x mandatory; scrollbar-color: var(--accent) var(--surface-2); }
+    .preview-gallery img { flex: 0 0 100%; width: 100%; height: 100%; max-height: 100%; object-fit: contain; scroll-snap-align: center; }
+    .preview-gallery.is-scrollable img { flex-basis: 100%; }
+    .preview-video { display: block; width: 100%; height: 100%; object-fit: contain; }
     .project-actions { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; margin-top: auto; }
     .repo-list { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
     .repo-row { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 19px 22px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); transition: border-color .2s ease, transform .2s ease; }
@@ -642,6 +644,7 @@
       <div class="shell hero-grid">
         <div class="hero-side" data-reveal>
           <h1>I'm the guy you need for<span> building and managing digital systems.</span></h1>
+          <p class="hero-copy">We bring businesses to life with websites, digital products, and internal or customer-facing systems that simplify work, connect services, and support growth.</p>
         </div>
 
 
@@ -673,7 +676,7 @@
           <div class="hero-actions">
             <a class="btn btn-primary" href="#work"><i class="bi bi-rocket-takeoff"></i> Explore Live Work</a>
             <a class="btn btn-secondary" href="https://github.com/scriptedSyntax" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub Profile</a>
-  <!--          <a class="btn btn-secondary" href="samuel-mwangi-software-developer-cv.pdf" download="samuel-mwangi-software-developer-cv.pdf"><i class="bi bi-file-earmark-arrow-down"></i> Download CV</a> -->
+  <!--          <a class="btn btn-secondary" href="samuel-mwangi-cv-developer.pdf" download="samuel-mwangi-software-developer-cv.pdf"><i class="bi bi-file-earmark-arrow-down"></i> Download CV</a> -->
           </div>
           <p class="icon-hint">Hover or click for more info</p>
           <div class="hero-tags" aria-label="Core specialities">
@@ -695,11 +698,20 @@
          <h2> Backed by Working Software </h2>
         </div>
         <div class="work-grid">
-          <article class="project live" data-reveal><div class="project-top"><span class="tag"><span class="dot"></span> Live Website</span><i class="bi bi-box-arrow-up-right out-icon"></i></div><h3>Nova Children's Therapies</h3><p>Website for Nova Children's Therapies, presenting its services and approach to supporting children and families.</p><div class="project-preview preview-placeholder"><div class="preview-mark"><i class="bi bi-window"></i></div><strong>Live preview</strong><span>Open the website to view it without embedded verification delays.</span></div><div class="project-stack"><span>Therapy Services</span><span>Website</span></div><div class="project-actions"><a class="project-link" href="https://novachildren.therapies.workers.dev/" target="_blank" rel="noopener">View Live <i class="bi bi-arrow-up-right"></i></a></div></article>
-          <article class="project live" data-reveal><div class="project-top"><span class="tag"><span class="dot"></span> Live Website</span><i class="bi bi-box-arrow-up-right out-icon"></i></div><h3>Ledanie Construction</h3><p>Public-facing construction company website presenting services, project work and ways for prospective clients to get in touch.</p><div class="project-preview preview-placeholder"><div class="preview-mark"><i class="bi bi-window"></i></div><strong>Live preview</strong><span>Open the website to view it without embedded verification delays.</span></div><div class="project-stack"><span>Business Website</span><span>Responsive Web</span></div><div class="project-actions"><a class="project-link" href="https://ledanieconstruction.com/" target="_blank" rel="noopener">View Live <i class="bi bi-arrow-up-right"></i></a></div></article>
-          <article class="project live" data-reveal><div class="project-top"><span class="tag"><span class="dot"></span> Live Website</span><i class="bi bi-box-arrow-up-right out-icon"></i></div><h3>Gonepharm</h3><p>Company website for Gonepharm.</p><div class="project-preview preview-placeholder"><div class="preview-mark"><i class="bi bi-window"></i></div><strong>Live preview</strong><span>Open the website to view it without embedded verification delays.</span></div><div class="project-stack"><span>Business Website</span><span>Web Development</span></div><div class="project-actions"><a class="project-link" href="https://gonepharm.com/" target="_blank" rel="noopener">View Live <i class="bi bi-arrow-up-right"></i></a></div></article>
-          <article class="project live" data-reveal><div class="project-top"><span class="tag"><span class="dot"></span> Live Website</span><i class="bi bi-box-arrow-up-right out-icon"></i></div><h3>Gonepharm Plus</h3><p>Second Gonepharm web platform, presented separately from the main company website.</p><div class="project-preview preview-placeholder"><div class="preview-mark"><i class="bi bi-window"></i></div><strong>Live preview</strong><span>Open the website to view it without embedded verification delays.</span></div><div class="project-stack"><span>Web Application</span><span>Web Development</span></div><div class="project-actions"><a class="project-link" href="https://plus.gonepharm.com/" target="_blank" rel="noopener">View Live <i class="bi bi-arrow-up-right"></i></a></div></article>
-          <article class="project device" data-reveal><div class="project-top"><span class="tag"><i class="bi bi-cpu"></i> R&amp;D - Device Integration</span><i class="bi bi-box-arrow-up-right out-icon"></i></div><h3>Clinic-at-Hand Lab System</h3><p>Hardware and software integrated lab system connecting clinical device functionality with software workflows for point-of-care use.</p><div class="project-preview preview-placeholder"><div class="preview-mark"><i class="bi bi-window"></i></div><strong>Live preview</strong><span>Open the website to view it without embedded verification delays.</span></div><div class="project-stack"><span>Hardware + Software</span><span>Device Integration</span><span>R&amp;D</span></div><div class="project-actions"><a class="project-link" href="https://gonepharm.com/clinic-at-hand" target="_blank" rel="noopener">View Live <i class="bi bi-arrow-up-right"></i></a></div></article>
+          <article class="project device" data-reveal><div class="project-top"><span class="tag"><i class="bi bi-cpu"></i> R&amp;D - Device Integration</span><i class="bi bi-box-arrow-up-right out-icon"></i></div><h3>Clinic-at-Hand Lab System</h3><p>Hardware and software integrated lab system connecting clinical device functionality with software workflows for point-of-care use.</p><div class="project-preview"><button class="preview-thumb" type="button" aria-label="View larger screenshot of Clinic-at-Hand Lab System"><img src="screenshots/clinic at hand.png" alt="Clinic-at-Hand Lab System screenshot" loading="lazy" decoding="async"></button></div><div class="project-stack"><span>Hardware + Software</span><span>Device Integration</span><span>R&amp;D</span></div><div class="project-actions"><a class="project-link" href="https://gonepharm.com/clinic-at-hand" target="_blank" rel="noopener">View Live <i class="bi bi-arrow-up-right"></i></a></div></article>
+          <article class="project live" data-reveal><div class="project-top"><span class="tag"><span class="dot"></span> Live Website</span><i class="bi bi-box-arrow-up-right out-icon"></i></div><h3>Gonepharm</h3><p>Company website for Gonepharm.</p><div class="project-preview"><button class="preview-thumb" type="button" aria-label="View larger screenshot of Gonepharm"><img src="screenshots/gonepharm.png" alt="Gonepharm website screenshot" loading="lazy" decoding="async"></button></div><div class="project-stack"><span>Business Website</span><span>Web Development</span></div><div class="project-actions"><a class="project-link" href="https://gonepharm.com/" target="_blank" rel="noopener">View Live <i class="bi bi-arrow-up-right"></i></a></div></article>
+          <article class="project" data-reveal><div class="project-top"><span class="tag">Ecommerce</span><i class="bi bi-box-arrow-up-right out-icon"></i></div><h3>Ecommerce</h3><p>Free online shop system I made.</p><div class="project-preview"><button class="preview-thumb has-watch-demo" type="button" aria-label="Watch Ecommerce demo"><video src="demo-ecommerce.mp4" muted playsinline preload="metadata"></video><span class="watch-demo-label"><i class="bi bi-play-circle"></i> Watch Demo</span></button></div><div class="project-stack"><span>Ecommerce</span><span>Web Development</span></div><div class="project-actions"><a class="project-link" href="https://github.com/scriptedSyntax/nextjs-commerce" target="_blank" rel="noopener">View Project <i class="bi bi-arrow-up-right"></i></a></div></article>
+          <article class="project live" data-reveal><div class="project-top"><span class="tag"><span class="dot"></span> Live Website</span><i class="bi bi-box-arrow-up-right out-icon"></i></div><h3>Nova Children's Therapies</h3><p>Website for Nova Children's Therapies, presenting its services and approach to supporting children and families.</p><div class="project-preview"><button class="preview-thumb" type="button" aria-label="View larger screenshot of Nova Children's Therapies"><img src="screenshots/nova.png" alt="Nova Children's Therapies website screenshot" loading="lazy" decoding="async"></button></div><div class="project-stack"><span>Therapy Services</span><span>Website</span></div><div class="project-actions"><a class="project-link" href="https://novachildren.therapies.workers.dev/" target="_blank" rel="noopener">View Live <i class="bi bi-arrow-up-right"></i></a></div></article>
+          <article class="project live" data-reveal><div class="project-top"><span class="tag"><span class="dot"></span> Live Website</span><i class="bi bi-box-arrow-up-right out-icon"></i></div><h3>Ledanie Construction</h3><p>Public-facing construction company website presenting services, project work and ways for prospective clients to get in touch.</p><div class="project-preview"><button class="preview-thumb" type="button" aria-label="View larger screenshot of Ledanie Construction"><img src="screenshots/ledanie.png" alt="Ledanie Construction website screenshot" loading="lazy" decoding="async"></button></div><div class="project-stack"><span>Business Website</span><span>Responsive Web</span></div><div class="project-actions"><a class="project-link" href="https://ledanieconstruction.com/" target="_blank" rel="noopener">View Live <i class="bi bi-arrow-up-right"></i></a></div></article>
+          <article class="project" data-reveal><div class="project-top"><span class="tag">Bulk SMS Platform</span><i class="bi bi-box-arrow-up-right out-icon"></i></div><h3>Bulk SMS System</h3><p>A role-based multi-tenant SMS platform for managing recipients, staff, broadcasts, and activity logs.</p><div class="project-preview project-gallery"><div class="project-gallery-track">
+            <button class="preview-thumb" type="button" aria-label="View Bulk SMS dashboard screenshot"><img src="https://raw.githubusercontent.com/scriptedSyntax/bulk-sms-system/main/images/dashboard.png" alt="Bulk SMS dashboard screenshot" loading="lazy" decoding="async"></button>
+            <button class="preview-thumb" type="button" aria-label="View Bulk SMS send SMS screenshot"><img src="https://raw.githubusercontent.com/scriptedSyntax/bulk-sms-system/main/images/send-sms.png" alt="Bulk SMS send message screenshot" loading="lazy" decoding="async"></button>
+            <button class="preview-thumb" type="button" aria-label="View Bulk SMS recipients screenshot"><img src="https://raw.githubusercontent.com/scriptedSyntax/bulk-sms-system/main/images/receipients.png" alt="Bulk SMS recipients list screenshot" loading="lazy" decoding="async"></button>
+            <button class="preview-thumb" type="button" aria-label="View Bulk SMS recipient details screenshot"><img src="https://raw.githubusercontent.com/scriptedSyntax/bulk-sms-system/main/images/recepients2.png" alt="Bulk SMS recipient details screenshot" loading="lazy" decoding="async"></button>
+            <button class="preview-thumb" type="button" aria-label="View Bulk SMS logs screenshot"><img src="https://raw.githubusercontent.com/scriptedSyntax/bulk-sms-system/main/images/logs.png" alt="Bulk SMS activity logs screenshot" loading="lazy" decoding="async"></button>
+            <button class="preview-thumb" type="button" aria-label="View Bulk SMS staff screenshot"><img src="https://raw.githubusercontent.com/scriptedSyntax/bulk-sms-system/main/images/staff.png" alt="Bulk SMS staff management screenshot" loading="lazy" decoding="async"></button>
+          </div></div><div class="project-stack"><span>Multi-Tenant</span><span>SMS Platform</span><span>Python</span></div><div class="project-actions"><a class="project-link" href="https://github.com/scriptedSyntax/bulk-sms-system" target="_blank" rel="noopener">View Project <i class="bi bi-arrow-up-right"></i></a></div></article>
+          <article class="project live" data-reveal><div class="project-top"><span class="tag"><span class="dot"></span> Live Website</span><i class="bi bi-box-arrow-up-right out-icon"></i></div><h3>Gonepharm Plus</h3><p>Second Gonepharm web platform, presented separately from the main company website.</p><div class="project-preview"><button class="preview-thumb" type="button" aria-label="View larger screenshot of Gonepharm Plus"><img src="screenshots/plus.png" alt="Gonepharm Plus screenshot" loading="lazy" decoding="async"></button></div><div class="project-stack"><span>Web Application</span><span>Web Development</span></div><div class="project-actions"><a class="project-link" href="https://plus.gonepharm.com/" target="_blank" rel="noopener">View Live <i class="bi bi-arrow-up-right"></i></a></div></article>
         </div>
         <div class="section-heading" data-reveal style="margin-top:48px"><span class="label">Selected GitHub Projects</span>
           <h2>More builds across products and operations.</h2>
@@ -711,7 +723,7 @@
           <a class="repo-row" href="https://github.com/scriptedSyntax/nextjs-ai-chatbot" target="_blank" rel="noopener" data-reveal><span><h3>AI Chatbot</h3><p>Get someone to talk to 🦜</p></span><span class="project-link">View <i class="bi bi-arrow-up-right"></i></span></a>
           <a class="repo-row" href="https://github.com/scriptedSyntax/symptomChecker" target="_blank" rel="noopener" data-reveal><span><h3>Symptom Checker</h3><p>Use AI to check your health and symptoms.</p></span><span class="project-link">View <i class="bi bi-arrow-up-right"></i></span></a>
           <a class="repo-row" href="https://github.com/scriptedSyntax/kejani-house-finder" target="_blank" rel="noopener" data-reveal><span><h3>Kejani House Finder</h3><p>Ever thought about how much of a hustle House hunting was. I fixed it.</p></span><span class="project-link">View <i class="bi bi-arrow-up-right"></i></span></a>
-          <a class="repo-row" href="https://github.com/scriptedSyntax/nextjs-commerce" target="_blank" rel="noopener" data-reveal><span><h3>E-Commerce</h3><p>Free online shop system I made.</p></span><span class="project-link">View <i class="bi bi-arrow-up-right"></i></span></a>
+          <a class="repo-row" href="https://github.com/scriptedSyntax/nextjs-commerce" target="_blank" rel="noopener" data-reveal><span><h3>Ecommerce</h3><p>Free online shop system I made.</p></span><span class="project-link">View <i class="bi bi-arrow-up-right"></i></span></a>
           <a class="repo-row" href="https://github.com/scriptedSyntax/business-central-al-book-management" target="_blank" rel="noopener" data-reveal><span><h3>Business Central AL Book Management</h3><p>Business Central project for book management.</p></span><span class="project-link">View APP <i class="bi bi-arrow-up-right"></i></span></a>
           <a class="repo-row" href="https://github.com/scriptedSyntax/card_imposer" target="_blank" rel="noopener" data-reveal><span><h3>Card Imposer</h3><p>For designers. Just edit your business cards here!</p></span><span class="project-link">View <i class="bi bi-arrow-up-right"></i></span></a>
           <a class="repo-row" href="https://github.com/scriptedSyntax" target="_blank" rel="noopener" data-reveal><span><h3>GitHub Profile &amp; README</h3><p>Browse more here.. Theres more of me here!</p></span><span class="project-link">Open GitHub <i class="bi bi-arrow-up-right"></i></span></a>
@@ -941,9 +953,8 @@
 
   <div class="preview-modal" id="previewModal" role="dialog" aria-modal="true" aria-labelledby="previewTitle" aria-hidden="true">
     <div class="preview-dialog">
-      <div class="preview-dialog-head"><strong id="previewTitle">Live preview</strong><div class="preview-dialog-actions"><a class="preview-open-link" id="previewOpenLink" href="#" target="_blank" rel="noopener">Open in new tab <i class="bi bi-arrow-up-right"></i></a><button class="preview-dialog-close" id="closePreview" type="button" aria-label="Close preview"><i class="bi bi-x-lg"></i></button></div></div>
-      <div class="preview-status" id="previewStatus" aria-live="polite">Loading preview. If browser verification hangs, use "Open in new tab".</div>
-      <iframe class="preview-frame" id="previewFrame" title="Live website preview" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
+      <div class="preview-dialog-head"><strong id="previewTitle">Project preview</strong><div class="preview-dialog-actions"><a class="preview-open-link" id="previewOpenLink" href="#" target="_blank" rel="noopener">Open project <i class="bi bi-arrow-up-right"></i></a><button class="preview-dialog-close" id="closePreview" type="button" aria-label="Close preview"><i class="bi bi-x-lg"></i></button></div></div>
+      <div class="preview-media" id="previewMedia"></div>
     </div>
   </div>
   <div class="opportunity-modal" id="opportunityModal" role="dialog" aria-modal="true" aria-labelledby="opportunityTitle" aria-hidden="true">
@@ -964,7 +975,7 @@
 
   <footer class="footer">
     <div class="shell footer-inner">
-      <p>Copyright 2026 Samuel Mwangi Ngonjo | Full-Stack Developer</p>
+      <p>Copyright 2026 Samuel Mwangi samuel-mwangi-cv-developer| Full-Stack Developer</p>
       <nav class="footer-links" aria-label="Social links">
         <a href="https://github.com/scriptedSyntax/myportfolio/blob/main/index" target="_blank" rel="noopener">Portfolio</a>
         <a href="https://github.com/scriptedSyntax" target="_blank" rel="noopener">GitHub</a>
@@ -1104,43 +1115,52 @@
       }, { passive: true });
 
       const previewModal = document.getElementById('previewModal');
-      const previewFrame = document.getElementById('previewFrame');
       const previewTitle = document.getElementById('previewTitle');
-      const previewStatus = document.getElementById('previewStatus');
+      const previewMedia = document.getElementById('previewMedia');
       const previewOpenLink = document.getElementById('previewOpenLink');
-      let previewTimer;
       const closePreview = () => {
         previewModal.classList.remove('is-open');
         previewModal.setAttribute('aria-hidden', 'true');
         document.body.classList.remove('modal-open');
-        window.clearTimeout(previewTimer);
-        previewFrame.src = 'about:blank';
+        previewMedia.replaceChildren();
       };
       document.querySelectorAll('.project-preview').forEach((preview) => {
         const project = preview.closest('.project');
-        const liveLink = project && project.querySelector('.project-actions a');
-        if (!liveLink) return;
+        const projectLink = project && project.querySelector('.project-actions a');
+        if (!projectLink) return;
         const title = project.querySelector('h3')?.textContent.trim() || 'Project';
-        const button = document.createElement('button');
-        button.type = 'button';
-        button.className = 'preview-placeholder';
-        button.setAttribute('aria-label', 'Show live preview: ' + title);
-        const screenshot = ({ 'https://novachildren.therapies.workers.dev/': 'screenshots/nova.png', 'https://ledanieconstruction.com/': 'screenshots/ledanie.png', 'https://gonepharm.com/': 'screenshots/gonepharm.png', 'https://plus.gonepharm.com/': 'screenshots/plus.png', 'https://gonepharm.com/clinic-at-hand': 'screenshots/clinic at hand.png' })[liveLink.href];
-        button.innerHTML = (screenshot ? '<img src="' + screenshot + '" alt="Screenshot preview of ' + title + '" loading="lazy" decoding="async">' : '') + '<span class="preview-label"><i class="bi bi-play-circle"></i> Show live preview</span>';
-        button.addEventListener('click', () => {
-          previewTitle.textContent = title + ' - Live Preview';
-          previewOpenLink.href = liveLink.href;
-          previewStatus.textContent = 'Loading preview. If browser verification hangs, use "Open in new tab".';
+        const images = Array.from(preview.querySelectorAll('.preview-thumb img')).map((image) => ({ src: image.src, alt: image.alt }));
+        const videoSrc = preview.querySelector('.preview-thumb video')?.getAttribute('src');
+        const showPreview = () => {
+          previewTitle.textContent = title;
+          previewOpenLink.href = projectLink.href;
+          previewOpenLink.innerHTML = (projectLink.hostname === 'github.com' ? 'View on GitHub' : 'Open live site') + ' <i class="bi bi-arrow-up-right"></i>';
+          previewMedia.replaceChildren();
+          if (videoSrc) {
+            const video = document.createElement('video');
+            video.className = 'preview-video';
+            video.controls = true;
+            video.playsInline = true;
+            video.preload = 'metadata';
+            video.src = videoSrc;
+            previewMedia.append(video);
+          } else {
+            const gallery = document.createElement('div');
+            gallery.className = 'preview-gallery' + (images.length > 1 ? ' is-scrollable' : '');
+            images.forEach(({ src, alt }) => {
+              const image = document.createElement('img');
+              image.src = src;
+              image.alt = alt;
+              image.loading = 'lazy';
+              gallery.append(image);
+            });
+            previewMedia.append(gallery);
+          }
           previewModal.classList.add('is-open');
           previewModal.setAttribute('aria-hidden', 'false');
           document.body.classList.add('modal-open');
-          previewFrame.src = liveLink.href;
-          window.clearTimeout(previewTimer);
-          previewTimer = window.setTimeout(() => {
-            previewStatus.textContent = 'Still waiting? This site may require verification in a regular tab. Use "Open in new tab" to continue.';
-          }, 12000);
-        });
-        preview.replaceChildren(button);
+        };
+        preview.querySelectorAll('.preview-thumb').forEach((button) => button.addEventListener('click', showPreview));
       });
       document.getElementById('closePreview').addEventListener('click', closePreview);
       previewModal.addEventListener('click', (event) => { if (event.target === previewModal) closePreview(); });
